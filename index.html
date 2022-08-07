@@ -65,7 +65,7 @@ $('.122860.databaseTable_import_wrap').on('scroll', function () {checkButtonNece
 $(document).ready(function() {
 
   //var csvfile_import_122860 = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/220427/mtcars.csv".replace(/\&amp\;/g, '&');
-  var csvfile_import_122860 = "https://raw.githubusercontent.com/leoadobe/projectflash/main/CustomerStories.csv";
+  var csvfile_import_122860 = "https://leoadobe.github.io/projectflash/CustomerStories.csv";
   $('.122860 .databaseTable_import_wrap').CSVToTable( csvfile_import_122860 , { loadingText: 'Generating Table', loadingImage: 'https://campus.mst.edu/emctest/t4_template/content_types/search_sort_table/images/loading.gif', startLine: 0, tableClass: "databaseTable_import", theadClass: "heading" }).bind("loadComplete",function() { 
     $('.122860 .databaseTable_import_wrap').find('TABLE').tablesorter({ widgets: ["zebra"] });      
     $('.122860 .databaseTable_import').filterTable({inputSelector:".122860 .databaseTable_search"});
