@@ -1,0 +1,3505 @@
+<script>
+// map each standardized parent id to a customer type
+// customer type values can be "ams", "onp", or "new"
+// failure to add this will result in customer type "tbd"
+var customerTypes =
+	[
+ 		{"customer":{"spid":"100009406", "custtype":"new"}},
+	    {"customer":{"spid":"10039", "custtype":"new"}},
+		{"customer":{"spid":"101213672", "custtype":"new"}},
+		{"customer":{"spid":"1013", "custtype":"new"}},
+		{"customer":{"spid":"10134", "custtype":"ams"}},
+		{"customer":{"spid":"101490552", "custtype":"new"}},
+		{"customer":{"spid":"101577978", "custtype":"new"}},
+		{"customer":{"spid":"101824467", "custtype":"new"}},
+		{"customer":{"spid":"102130522", "custtype":"new"}},
+		{"customer":{"spid":"102641758", "custtype":"new"}},
+		{"customer":{"spid":"10361", "custtype":"ams"}},
+		{"customer":{"spid":"10498", "custtype":"onp"}},
+		{"customer":{"spid":"1062", "custtype":"new"}},
+		{"customer":{"spid":"10767", "custtype":"ams"}},
+		{"customer":{"spid":"10779", "custtype":"new"}},
+		{"customer":{"spid":"10787874", "custtype":"new"}},
+		{"customer":{"spid":"11054", "custtype":"ams"}},
+		{"customer":{"spid":"11096", "custtype":"ams"}},
+		{"customer":{"spid":"11158", "custtype":"ams"}},
+        {"customer":{"spid":"11310", "custtype":"ams"}},
+        {"customer":{"spid":"11345", "custtype":"ams"}},
+		{"customer":{"spid":"11397", "custtype":"ams"}},
+		{"customer":{"spid":"1141", "custtype":"onp"}},
+		{"customer":{"spid":"11428", "custtype":"ams"}},
+		{"customer":{"spid":"11445", "custtype":"new"}},
+  		{"customer":{"spid":"11767", "custtype":"ams"}},
+   		{"customer":{"spid":"11770", "custtype":"new"}},
+		{"customer":{"spid":"11870", "custtype":"new"}},
+		{"customer":{"spid":"12099531", "custtype":"new"}},
+		{"customer":{"spid":"12143", "custtype":"ams"}},
+		{"customer":{"spid":"12153", "custtype":"new"}},
+		{"customer":{"spid":"12183", "custtype":"ams"}},
+		{"customer":{"spid":"12367", "custtype":"new"}},
+		{"customer":{"spid":"12658", "custtype":"onp"}},
+		{"customer":{"spid":"12747", "custtype":"onp"}},
+		{"customer":{"spid":"12836", "custtype":"new"}},
+		{"customer":{"spid":"12914", "custtype":"ams"}},
+		{"customer":{"spid":"13026", "custtype":"new"}},
+		{"customer":{"spid":"13165", "custtype":"onp"}},
+		{"customer":{"spid":"13239", "custtype":"ams"}},
+		{"customer":{"spid":"13250", "custtype":"ams"}},
+		{"customer":{"spid":"13348", "custtype":"new"}},
+		{"customer":{"spid":"13379", "custtype":"new"}},
+		{"customer":{"spid":"13452", "custtype":"new"}},
+		{"customer":{"spid":"13504", "custtype":"new"}},
+		{"customer":{"spid":"13543", "custtype":"new"}},
+		{"customer":{"spid":"13550", "custtype":"onp"}},
+		{"customer":{"spid":"13555", "custtype":"ams"}},
+		{"customer":{"spid":"13565", "custtype":"ams"}},
+		{"customer":{"spid":"13594", "custtype":"onp"}},
+		{"customer":{"spid":"13908", "custtype":"onp"}},
+		{"customer":{"spid":"13927", "custtype":"new"}},
+		{"customer":{"spid":"14051", "custtype":"onp"}},
+		{"customer":{"spid":"14061", "custtype":"new"}},
+		{"customer":{"spid":"14121", "custtype":"ams"}},
+		{"customer":{"spid":"1422", "custtype":"ams"}},
+		{"customer":{"spid":"14236", "custtype":"onp"}},
+        {"customer":{"spid":"14284", "custtype":"ams"}}, 
+		{"customer":{"spid":"14298", "custtype":"new"}},
+		{"customer":{"spid":"143", "custtype":"ams"}},
+		{"customer":{"spid":"14421", "custtype":"onp"}},
+		{"customer":{"spid":"14431", "custtype":"onp"}},
+		{"customer":{"spid":"14436", "custtype":"onp"}},
+		{"customer":{"spid":"14538", "custtype":"ams"}},
+		{"customer":{"spid":"14636", "custtype":"ams"}},
+		{"customer":{"spid":"14680", "custtype":"new"}},
+		{"customer":{"spid":"14688", "custtype":"onp"}},
+		{"customer":{"spid":"14695", "custtype":"onp"}},
+		{"customer":{"spid":"14932", "custtype":"ams"}},
+		{"customer":{"spid":"15004", "custtype":"ams"}},
+		{"customer":{"spid":"15073", "custtype":"ams"}},
+		{"customer":{"spid":"15131", "custtype":"onp"}},
+		{"customer":{"spid":"15212", "custtype":"ams"}},
+		{"customer":{"spid":"15264", "custtype":"ams"}},
+		{"customer":{"spid":"15331", "custtype":"ams"}},
+		{"customer":{"spid":"15455", "custtype":"onp"}},
+		{"customer":{"spid":"15463", "custtype":"new"}},
+		{"customer":{"spid":"15503", "custtype":"ams"}},
+		{"customer":{"spid":"15511", "custtype":"new"}},
+		{"customer":{"spid":"15571", "custtype":"onp"}},
+		{"customer":{"spid":"15681", "custtype":"new"}},
+		{"customer":{"spid":"1594", "custtype":"ams"}},
+		{"customer":{"spid":"1612", "custtype":"onp"}},
+		{"customer":{"spid":"16323", "custtype":"new"}},
+		{"customer":{"spid":"1635", "custtype":"onp"}},
+		{"customer":{"spid":"16401", "custtype":"ams"}},
+		{"customer":{"spid":"16434", "custtype":"onp"}},
+		{"customer":{"spid":"16438", "custtype":"onp"}},
+ 		{"customer":{"spid":"16490", "custtype":"new"}}, 
+		{"customer":{"spid":"16509", "custtype":"onp"}},
+		{"customer":{"spid":"16564", "custtype":"new"}},
+		{"customer":{"spid":"16578", "custtype":"new"}},
+		{"customer":{"spid":"16651", "custtype":"new"}},
+		{"customer":{"spid":"16695", "custtype":"new"}},
+		{"customer":{"spid":"16749", "custtype":"ams"}},
+ 		{"customer":{"spid":"16933", "custtype":"new"}},
+		{"customer":{"spid":"16935", "custtype":"new"}},
+		{"customer":{"spid":"1697", "custtype":"ams"}},
+ 		{"customer":{"spid":"17041", "custtype":"onp"}}, 
+   		{"customer":{"spid":"17245257", "custtype":"new"}},
+        {"customer":{"spid":"17274691", "custtype":"new"}},
+		{"customer":{"spid":"17287105", "custtype":"new"}},
+		{"customer":{"spid":"17304", "custtype":"onp"}},
+        {"customer":{"spid":"17324", "custtype":"new"}},
+        {"customer":{"spid":"17381", "custtype":"ams"}},
+        {"customer":{"spid":"17557891", "custtype":"new"}},
+        {"customer":{"spid":"17654744", "custtype":"new"}}, 
+        {"customer":{"spid":"17724", "custtype":"ams"}},
+		{"customer":{"spid":"17761", "custtype":"new"}},
+		{"customer":{"spid":"17819", "custtype":"new"}},
+		{"customer":{"spid":"17857", "custtype":"ams"}},
+		{"customer":{"spid":"17859", "custtype":"new"}},
+		{"customer":{"spid":"17870", "custtype":"new"}},
+		{"customer":{"spid":"17880", "custtype":"onp"}},
+		{"customer":{"spid":"17926", "custtype":"new"}},
+		{"customer":{"spid":"17972", "custtype":"onp"}},
+		{"customer":{"spid":"18060", "custtype":"new"}},
+		{"customer":{"spid":"18063", "custtype":"ams"}},
+		{"customer":{"spid":"18378", "custtype":"ams"}},
+		{"customer":{"spid":"18431", "custtype":"ams"}},
+		{"customer":{"spid":"18448", "custtype":"ams"}},
+		{"customer":{"spid":"18495", "custtype":"new"}},
+		{"customer":{"spid":"18556045", "custtype":"new"}},
+		{"customer":{"spid":"18682", "custtype":"new"}},
+		{"customer":{"spid":"18762", "custtype":"ams"}},
+		{"customer":{"spid":"18918", "custtype":"new"}},
+		{"customer":{"spid":"18920", "custtype":"ams"}},
+		{"customer":{"spid":"19026", "custtype":"new"}},
+		{"customer":{"spid":"19063", "custtype":"ams"}},
+		{"customer":{"spid":"19190", "custtype":"onp"}},
+		{"customer":{"spid":"1922", "custtype":"ams"}},
+ 		{"customer":{"spid":"1927", "custtype":"ams"}}, 
+		{"customer":{"spid":"19274", "custtype":"new"}},
+		{"customer":{"spid":"19339", "custtype":"onp"}},
+		{"customer":{"spid":"19347", "custtype":"new"}},
+		{"customer":{"spid":"1947", "custtype":"ams"}},
+		{"customer":{"spid":"19515", "custtype":"new"}},
+		{"customer":{"spid":"19555", "custtype":"ams"}},
+		{"customer":{"spid":"19599", "custtype":"ams"}},
+		{"customer":{"spid":"19633", "custtype":"ams"}},
+		{"customer":{"spid":"19699", "custtype":"new"}},
+		{"customer":{"spid":"19743", "custtype":"new"}},
+		{"customer":{"spid":"19749", "custtype":"new"}},
+ 		{"customer":{"spid":"19951", "custtype":"ams"}}, 
+		{"customer":{"spid":"19958", "custtype":"onp"}},
+		{"customer":{"spid":"19975", "custtype":"new"}},
+		{"customer":{"spid":"20294", "custtype":"ams"}},
+		{"customer":{"spid":"20311", "custtype":"new"}},
+	    {"customer":{"spid":"20354", "custtype":"new"}},
+		{"customer":{"spid":"20608", "custtype":"onp"}},
+		{"customer":{"spid":"20923", "custtype":"ams"}},
+		{"customer":{"spid":"20940", "custtype":"new"}},
+		{"customer":{"spid":"21021", "custtype":"ams"}},
+		{"customer":{"spid":"21025", "custtype":"onp"}},
+		{"customer":{"spid":"21062", "custtype":"onp"}},
+		{"customer":{"spid":"21142", "custtype":"onp"}},
+		{"customer":{"spid":"2116", "custtype":"ams"}},
+		{"customer":{"spid":"21225", "custtype":"new"}},
+		{"customer":{"spid":"21266", "custtype":"onp"}},
+		{"customer":{"spid":"21401", "custtype":"onp"}},
+		{"customer":{"spid":"21584", "custtype":"new"}},
+		{"customer":{"spid":"21704", "custtype":"ams"}},
+ 		{"customer":{"spid":"21730", "custtype":"ams"}}, 
+		{"customer":{"spid":"21733", "custtype":"ams"}},
+ 		{"customer":{"spid":"21788", "custtype":"new"}}, 
+		{"customer":{"spid":"21967", "custtype":"ams"}},
+		{"customer":{"spid":"2198", "custtype":"onp"}},
+		{"customer":{"spid":"22018", "custtype":"ams"}},
+		{"customer":{"spid":"22022", "custtype":"ams"}},
+		{"customer":{"spid":"22089", "custtype":"new"}},
+		{"customer":{"spid":"22195", "custtype":"ams"}},
+		{"customer":{"spid":"22294", "custtype":"ams"}},
+		{"customer":{"spid":"22447", "custtype":"new"}},
+		{"customer":{"spid":"22485", "custtype":"ams"}},
+		{"customer":{"spid":"22567", "custtype":"onp"}},
+		{"customer":{"spid":"22737", "custtype":"new"}},
+		{"customer":{"spid":"22839", "custtype":"onp"}},
+        {"customer":{"spid":"23124", "custtype":"new"}},
+        {"customer":{"spid":"23295", "custtype":"new"}},
+        {"customer":{"spid":"23363", "custtype":"ams"}},
+		{"customer":{"spid":"23419", "custtype":"ams"}},
+		{"customer":{"spid":"23555", "custtype":"ams"}},
+		{"customer":{"spid":"23594", "custtype":"new"}},
+ 		{"customer":{"spid":"23624", "custtype":"new"}}, 
+		{"customer":{"spid":"23647", "custtype":"new"}},
+		{"customer":{"spid":"23692", "custtype":"ams"}},
+		{"customer":{"spid":"23764", "custtype":"new"}},
+		{"customer":{"spid":"23897", "custtype":"onp"}},
+		{"customer":{"spid":"2392", "custtype":"new"}},
+		{"customer":{"spid":"23989", "custtype":"new"}},
+		{"customer":{"spid":"24145", "custtype":"onp"}},
+		{"customer":{"spid":"24171", "custtype":"new"}},
+		{"customer":{"spid":"250", "custtype":"new"}},
+		{"customer":{"spid":"25233", "custtype":"ams"}},
+		{"customer":{"spid":"25382", "custtype":"ams"}},
+		{"customer":{"spid":"25403", "custtype":"new"}},
+		{"customer":{"spid":"25429", "custtype":"new"}},
+		{"customer":{"spid":"25472", "custtype":"ams"}},
+ 		{"customer":{"spid":"25479", "custtype":"onp"}}, 
+		{"customer":{"spid":"25692", "custtype":"ams"}},
+		{"customer":{"spid":"25705", "custtype":"ams"}},
+		{"customer":{"spid":"25876", "custtype":"onp"}},
+		{"customer":{"spid":"25891", "custtype":"new"}},
+		{"customer":{"spid":"25900", "custtype":"new"}},
+		{"customer":{"spid":"25961", "custtype":"ams"}},
+		{"customer":{"spid":"25988", "custtype":"onp"}},
+		{"customer":{"spid":"25996", "custtype":"new"}},
+		{"customer":{"spid":"26119", "custtype":"new"}},
+		{"customer":{"spid":"26134", "custtype":"onp"}},
+		{"customer":{"spid":"26152", "custtype":"onp"}},
+		{"customer":{"spid":"2618", "custtype":"onp"}},
+		{"customer":{"spid":"26219", "custtype":"ams"}},
+		{"customer":{"spid":"26286", "custtype":"onp"}},
+		{"customer":{"spid":"263", "custtype":"ams"}},
+		{"customer":{"spid":"26416", "custtype":"ams"}},
+		{"customer":{"spid":"264712", "custtype":"ams"}},
+		{"customer":{"spid":"26512", "custtype":"new"}},
+		{"customer":{"spid":"265332", "custtype":"new"}},
+		{"customer":{"spid":"26534", "custtype":"onp"}},
+		{"customer":{"spid":"265343", "custtype":"ams"}},
+		{"customer":{"spid":"265416", "custtype":"new"}},
+		{"customer":{"spid":"265582", "custtype":"ams"}},
+		{"customer":{"spid":"266445", "custtype":"onp"}},
+		{"customer":{"spid":"26668", "custtype":"ams"}},
+		{"customer":{"spid":"26686", "custtype":"onp"}},
+		{"customer":{"spid":"266921", "custtype":"onp"}},
+		{"customer":{"spid":"266931", "custtype":"ams"}},
+		{"customer":{"spid":"267608", "custtype":"onp"}},
+		{"customer":{"spid":"267612", "custtype":"onp"}},
+		{"customer":{"spid":"267613", "custtype":"onp"}},
+ 		{"customer":{"spid":"268145", "custtype":"onp"}}, 
+		{"customer":{"spid":"269027", "custtype":"ams"}},
+		{"customer":{"spid":"269392", "custtype":"new"}},
+		{"customer":{"spid":"269404", "custtype":"onp"}},
+		{"customer":{"spid":"269500", "custtype":"onp"}},
+		{"customer":{"spid":"269523", "custtype":"new"}},
+		{"customer":{"spid":"269728", "custtype":"onp"}},
+		{"customer":{"spid":"269882", "custtype":"onp"}},
+		{"customer":{"spid":"269974", "custtype":"new"}},
+		{"customer":{"spid":"26991", "custtype":"ams"}},
+		{"customer":{"spid":"269950", "custtype":"new"}},
+		{"customer":{"spid":"2701", "custtype":"ams"}},
+		{"customer":{"spid":"270377", "custtype":"new"}},
+		{"customer":{"spid":"272375", "custtype":"new"}},
+		{"customer":{"spid":"272460", "custtype":"new"}},
+		{"customer":{"spid":"272565", "custtype":"new"}},
+		{"customer":{"spid":"272724", "custtype":"ams"}},
+   		{"customer":{"spid":"273055", "custtype":"onp"}},
+        {"customer":{"spid":"2740", "custtype":"ams"}},
+		{"customer":{"spid":"27429", "custtype":"new"}},
+		{"customer":{"spid":"27490", "custtype":"onp"}},
+		{"customer":{"spid":"27500", "custtype":"onp"}},
+		{"customer":{"spid":"275925", "custtype":"ams"}},
+		{"customer":{"spid":"276032", "custtype":"new"}},
+		{"customer":{"spid":"276071", "custtype":"onp"}},
+		{"customer":{"spid":"276099", "custtype":"new"}},
+		{"customer":{"spid":"276219", "custtype":"new"}},
+		{"customer":{"spid":"2764", "custtype":"new"}},
+		{"customer":{"spid":"276651", "custtype":"new"}},
+		{"customer":{"spid":"276677", "custtype":"onp"}},
+		{"customer":{"spid":"276731", "custtype":"ams"}},
+		{"customer":{"spid":"276948", "custtype":"new"}},
+		{"customer":{"spid":"27207", "custtype":"new"}},
+		{"customer":{"spid":"277024", "custtype":"ams"}},
+		{"customer":{"spid":"277052", "custtype":"new"}},
+		{"customer":{"spid":"277060", "custtype":"new"}},
+		{"customer":{"spid":"277481", "custtype":"onp"}},
+		{"customer":{"spid":"277912", "custtype":"new"}},
+		{"customer":{"spid":"278378", "custtype":"new"}},
+		{"customer":{"spid":"278546", "custtype":"new"}},
+		{"customer":{"spid":"278632", "custtype":"new"}},
+		{"customer":{"spid":"27972", "custtype":"onp"}},
+		{"customer":{"spid":"27981", "custtype":"ams"}},
+		{"customer":{"spid":"280001", "custtype":"ams"}},
+		{"customer":{"spid":"28007", "custtype":"new"}},
+ 		{"customer":{"spid":"28010", "custtype":"new"}}, 
+		{"customer":{"spid":"28016", "custtype":"onp"}},
+		{"customer":{"spid":"280180", "custtype":"new"}},
+		{"customer":{"spid":"280201", "custtype":"ams"}},
+		{"customer":{"spid":"280489", "custtype":"new"}},
+		{"customer":{"spid":"280537", "custtype":"new"}},
+		{"customer":{"spid":"280576", "custtype":"new"}},
+		{"customer":{"spid":"280662", "custtype":"new"}},
+		{"customer":{"spid":"280823", "custtype":"new"}},
+		{"customer":{"spid":"280950", "custtype":"new"}},
+		{"customer":{"spid":"281551", "custtype":"new"}},
+		{"customer":{"spid":"281846", "custtype":"new"}},
+		{"customer":{"spid":"282053", "custtype":"new"}},
+		{"customer":{"spid":"282182", "custtype":"new"}},
+		{"customer":{"spid":"282607", "custtype":"new"}},
+		{"customer":{"spid":"282971", "custtype":"onp"}},
+		{"customer":{"spid":"283038", "custtype":"new"}},
+		{"customer":{"spid":"283146", "custtype":"onp"}},
+		{"customer":{"spid":"2881", "custtype":"ams"}},
+		{"customer":{"spid":"2919", "custtype":"onp"}},
+		{"customer":{"spid":"29484", "custtype":"new"}},
+		{"customer":{"spid":"29508", "custtype":"new"}},
+		{"customer":{"spid":"29513", "custtype":"onp"}},
+ 		{"customer":{"spid":"30370", "custtype":"new"}}, 
+		{"customer":{"spid":"3041", "custtype":"onp"}},
+		{"customer":{"spid":"32538", "custtype":"onp"}},
+		{"customer":{"spid":"329", "custtype":"ams"}},
+		{"customer":{"spid":"3322", "custtype":"ams"}},
+		{"customer":{"spid":"3382", "custtype":"new"}},
+        {"customer":{"spid":"33851", "custtype":"ams"}},
+        {"customer":{"spid":"33862", "custtype":"new"}},
+		{"customer":{"spid":"3400", "custtype":"onp"}},
+ 		{"customer":{"spid":"34004", "custtype":"new"}}, 
+		{"customer":{"spid":"34134", "custtype":"onp"}},
+		{"customer":{"spid":"3415", "custtype":"onp"}},
+ 		{"customer":{"spid":"348", "custtype":"ams"}}, 
+		{"customer":{"spid":"3482", "custtype":"new"}},
+		{"customer":{"spid":"3593", "custtype":"new"}},
+		{"customer":{"spid":"3683", "custtype":"new"}},
+		{"customer":{"spid":"3708", "custtype":"new"}},
+		{"customer":{"spid":"3737", "custtype":"new"}},
+		{"customer":{"spid":"3852", "custtype":"onp"}},
+   		{"customer":{"spid":"3922", "custtype":"onp"}},
+ 		{"customer":{"spid":"3992", "custtype":"new"}}, 
+        {"customer":{"spid":"4021", "custtype":"onp"}},
+		{"customer":{"spid":"4036", "custtype":"ams"}},
+		{"customer":{"spid":"408", "custtype":"new"}},
+		{"customer":{"spid":"4192", "custtype":"onp"}},
+ 		{"customer":{"spid":"4293", "custtype":"onp"}}, 
+		{"customer":{"spid":"43519664", "custtype":"new"}},
+		{"customer":{"spid":"442", "custtype":"onp"}},
+		{"customer":{"spid":"4478", "custtype":"onp"}},
+		{"customer":{"spid":"453", "custtype":"ams"}},
+		{"customer":{"spid":"4547", "custtype":"new"}},
+		{"customer":{"spid":"4684", "custtype":"ams"}},
+		{"customer":{"spid":"482", "custtype":"ams"}},
+		{"customer":{"spid":"4820", "custtype":"onp"}},
+		{"customer":{"spid":"4843", "custtype":"new"}},
+		{"customer":{"spid":"4935", "custtype":"new"}},
+		{"customer":{"spid":"4988", "custtype":"onp"}},
+        {"customer":{"spid":"5005", "custtype":"onp"}},
+        {"customer":{"spid":"5123", "custtype":"new"}},
+ 		{"customer":{"spid":"5213", "custtype":"ams"}}, 
+		{"customer":{"spid":"5230", "custtype":"onp"}},
+		{"customer":{"spid":"5233", "custtype":"onp"}},
+		{"customer":{"spid":"5239", "custtype":"onp"}},
+		{"customer":{"spid":"5367", "custtype":"ams"}},
+   		{"customer":{"spid":"5424", "custtype":"ams"}},
+        {"customer":{"spid":"5568", "custtype":"onp"}},
+		{"customer":{"spid":"5581", "custtype":"new"}},
+		{"customer":{"spid":"5671", "custtype":"onp"}},
+		{"customer":{"spid":"5739", "custtype":"new"}},
+		{"customer":{"spid":"5783", "custtype":"ams"}},
+		{"customer":{"spid":"5877", "custtype":"ams"}},
+		{"customer":{"spid":"5885", "custtype":"onp"}},
+		{"customer":{"spid":"59446055", "custtype":"new"}},
+		{"customer":{"spid":"5977", "custtype":"onp"}},
+		{"customer":{"spid":"6017", "custtype":"onp"}},
+		{"customer":{"spid":"606240", "custtype":"ams"}},
+		{"customer":{"spid":"606441", "custtype":"new"}},
+		{"customer":{"spid":"6070", "custtype":"onp"}},
+		{"customer":{"spid":"607739", "custtype":"new"}},
+		{"customer":{"spid":"607808", "custtype":"onp"}},
+		{"customer":{"spid":"608152", "custtype":"onp"}},
+		{"customer":{"spid":"608466", "custtype":"new"}},
+		{"customer":{"spid":"609047", "custtype":"onp"}},
+		{"customer":{"spid":"609059", "custtype":"new"}},
+		{"customer":{"spid":"609254", "custtype":"onp"}},
+		{"customer":{"spid":"609296", "custtype":"onp"}},
+		{"customer":{"spid":"610384", "custtype":"ams"}},
+ 		{"customer":{"spid":"610413", "custtype":"new"}}, 
+		{"customer":{"spid":"610572", "custtype":"ams"}},
+		{"customer":{"spid":"610585", "custtype":"ams"}},
+		{"customer":{"spid":"610980", "custtype":"new"}},
+		{"customer":{"spid":"610993", "custtype":"ams"}},
+		{"customer":{"spid":"6121", "custtype":"onp"}},
+		{"customer":{"spid":"6163", "custtype":"ams"}},
+		{"customer":{"spid":"6177", "custtype":"new"}},
+		{"customer":{"spid":"6212", "custtype":"new"}},
+		{"customer":{"spid":"633465", "custtype":"new"}},
+		{"customer":{"spid":"633473", "custtype":"onp"}},
+		{"customer":{"spid":"633527", "custtype":"ams"}},
+		{"customer":{"spid":"633562", "custtype":"ams"}},
+		{"customer":{"spid":"633564", "custtype":"new"}},
+		{"customer":{"spid":"633570", "custtype":"new"}},
+		{"customer":{"spid":"633598", "custtype":"new"}},
+		{"customer":{"spid":"633649", "custtype":"onp"}},
+		{"customer":{"spid":"633743", "custtype":"ams"}},
+		{"customer":{"spid":"633748", "custtype":"new"}},
+		{"customer":{"spid":"633759", "custtype":"new"}},
+		{"customer":{"spid":"633801", "custtype":"new"}},
+		{"customer":{"spid":"633806", "custtype":"ams"}},
+ 		{"customer":{"spid":"634022", "custtype":"ams"}},
+		{"customer":{"spid":"635272", "custtype":"new"}},
+		{"customer":{"spid":"635567", "custtype":"new"}},
+		{"customer":{"spid":"635897", "custtype":"new"}},
+		{"customer":{"spid":"635953", "custtype":"new"}},
+		{"customer":{"spid":"636297", "custtype":"new"}},
+		{"customer":{"spid":"636333", "custtype":"new"}},
+ 		{"customer":{"spid":"636880", "custtype":"new"}},
+	    {"customer":{"spid":"636919", "custtype":"ams"}},
+		{"customer":{"spid":"637521", "custtype":"new"}},
+		{"customer":{"spid":"637565", "custtype":"new"}},
+		{"customer":{"spid":"637827", "custtype":"new"}},
+		{"customer":{"spid":"637996", "custtype":"new"}},
+		{"customer":{"spid":"638707", "custtype":"new"}},
+		{"customer":{"spid":"638911", "custtype":"onp"}},
+		{"customer":{"spid":"639018", "custtype":"new"}},
+		{"customer":{"spid":"639615", "custtype":"new"}},
+		{"customer":{"spid":"639477", "custtype":"ams"}},
+ 		{"customer":{"spid":"639725", "custtype":"new"}}, 
+		{"customer":{"spid":"64", "custtype":"new"}},
+		{"customer":{"spid":"640564", "custtype":"new"}},
+		{"customer":{"spid":"640606", "custtype":"new"}},
+		{"customer":{"spid":"640690", "custtype":"new"}},
+		{"customer":{"spid":"640962", "custtype":"new"}},
+		{"customer":{"spid":"641223", "custtype":"new"}},
+		{"customer":{"spid":"641349", "custtype":"new"}},
+ 		{"customer":{"spid":"642093", "custtype":"new"}}, 
+		{"customer":{"spid":"642327", "custtype":"new"}},
+		{"customer":{"spid":"642791", "custtype":"new"}},
+		{"customer":{"spid":"642936", "custtype":"new"}},
+		{"customer":{"spid":"643662", "custtype":"new"}},
+		{"customer":{"spid":"643815", "custtype":"new"}},
+		{"customer":{"spid":"644085", "custtype":"new"}},
+	    {"customer":{"spid":"644245", "custtype":"onp"}},
+ 		{"customer":{"spid":"645382", "custtype":"onp"}},
+		{"customer":{"spid":"645385", "custtype":"new"}},
+		{"customer":{"spid":"646421", "custtype":"onp"}},
+		{"customer":{"spid":"646665", "custtype":"ams"}},
+		{"customer":{"spid":"646811", "custtype":"new"}},
+		{"customer":{"spid":"646884", "custtype":"ams"}},
+		{"customer":{"spid":"646919", "custtype":"onp"}},
+		{"customer":{"spid":"646945", "custtype":"onp"}},
+		{"customer":{"spid":"646999", "custtype":"onp"}},
+		{"customer":{"spid":"647218", "custtype":"onp"}},
+ 		{"customer":{"spid":"647529", "custtype":"new"}}, 
+		{"customer":{"spid":"648540", "custtype":"new"}},
+ 		{"customer":{"spid":"648674", "custtype":"new"}}, 
+		{"customer":{"spid":"648957", "custtype":"new"}},
+		{"customer":{"spid":"649484", "custtype":"new"}},
+		{"customer":{"spid":"649488", "custtype":"new"}},
+		{"customer":{"spid":"649644", "custtype":"new"}},
+		{"customer":{"spid":"649715", "custtype":"new"}},
+		{"customer":{"spid":"649721", "custtype":"ams"}},
+ 		{"customer":{"spid":"649888", "custtype":"new"}},
+        {"customer":{"spid":"650684", "custtype":"new"}},
+		{"customer":{"spid":"650768", "custtype":"new"}},
+		{"customer":{"spid":"651117", "custtype":"new"}},
+		{"customer":{"spid":"651320", "custtype":"new"}},
+		{"customer":{"spid":"652112", "custtype":"new"}},
+		{"customer":{"spid":"652557", "custtype":"new"}},
+		{"customer":{"spid":"652576", "custtype":"ams"}},
+		{"customer":{"spid":"65419406", "custtype":"new"}},
+		{"customer":{"spid":"654547", "custtype":"new"}},
+		{"customer":{"spid":"654851", "custtype":"new"}},
+		{"customer":{"spid":"655418", "custtype":"new"}},
+		{"customer":{"spid":"655754", "custtype":"new"}},
+		{"customer":{"spid":"656378", "custtype":"new"}},
+		{"customer":{"spid":"658737", "custtype":"ams"}},
+		{"customer":{"spid":"659555", "custtype":"new"}},
+		{"customer":{"spid":"659836", "custtype":"new"}},
+		{"customer":{"spid":"660353", "custtype":"onp"}},
+		{"customer":{"spid":"660582", "custtype":"new"}},
+		{"customer":{"spid":"661032", "custtype":"new"}},
+		{"customer":{"spid":"661351", "custtype":"new"}},
+		{"customer":{"spid":"661667", "custtype":"ams"}},
+		{"customer":{"spid":"661669", "custtype":"new"}},
+		{"customer":{"spid":"661675", "custtype":"new"}},
+		{"customer":{"spid":"661697", "custtype":"ams"}},
+		{"customer":{"spid":"662190", "custtype":"new"}},
+		{"customer":{"spid":"662340", "custtype":"new"}},
+		{"customer":{"spid":"662429", "custtype":"new"}},
+		{"customer":{"spid":"662435", "custtype":"new"}},
+ 		{"customer":{"spid":"662457", "custtype":"new"}}, 
+ 		{"customer":{"spid":"662472", "custtype":"new"}}, 
+		{"customer":{"spid":"662484", "custtype":"new"}},
+		{"customer":{"spid":"662583", "custtype":"new"}},
+		{"customer":{"spid":"662787", "custtype":"new"}},
+		{"customer":{"spid":"662838", "custtype":"new"}},
+		{"customer":{"spid":"664588", "custtype":"new"}},
+		{"customer":{"spid":"665577", "custtype":"new"}},
+		{"customer":{"spid":"665627", "custtype":"new"}},
+		{"customer":{"spid":"665667", "custtype":"new"}},
+		{"customer":{"spid":"665682", "custtype":"new"}},
+		{"customer":{"spid":"665906", "custtype":"new"}},
+		{"customer":{"spid":"666022", "custtype":"new"}},
+		{"customer":{"spid":"666025", "custtype":"new"}},
+ 		{"customer":{"spid":"666027", "custtype":"new"}}, 
+		{"customer":{"spid":"666059", "custtype":"new"}},
+		{"customer":{"spid":"6663", "custtype":"ams"}},
+ 		{"customer":{"spid":"666478", "custtype":"new"}}, 
+		{"customer":{"spid":"667048", "custtype":"new"}},
+		{"customer":{"spid":"667370", "custtype":"new"}},
+		{"customer":{"spid":"667798", "custtype":"new"}},
+		{"customer":{"spid":"667893", "custtype":"new"}},
+		{"customer":{"spid":"668140", "custtype":"new"}},
+		{"customer":{"spid":"668269", "custtype":"new"}},
+		{"customer":{"spid":"668535", "custtype":"new"}},
+		{"customer":{"spid":"668536", "custtype":"new"}},
+		{"customer":{"spid":"668574", "custtype":"new"}},
+		{"customer":{"spid":"668608", "custtype":"new"}},
+		{"customer":{"spid":"669415", "custtype":"new"}},
+		{"customer":{"spid":"669439", "custtype":"new"}},
+		{"customer":{"spid":"669479", "custtype":"onp"}},
+		{"customer":{"spid":"669496", "custtype":"new"}},
+		{"customer":{"spid":"669505", "custtype":"new"}},
+		{"customer":{"spid":"669525", "custtype":"new"}},
+		{"customer":{"spid":"669637", "custtype":"new"}},
+ 		{"customer":{"spid":"669765", "custtype":"new"}}, 
+		{"customer":{"spid":"669775", "custtype":"new"}},
+		{"customer":{"spid":"669776", "custtype":"new"}},
+		{"customer":{"spid":"669907", "custtype":"new"}},
+        {"customer":{"spid":"671145", "custtype":"new"}},
+		{"customer":{"spid":"671604", "custtype":"new"}},
+ 		{"customer":{"spid":"673088", "custtype":"new"}}, 
+	    {"customer":{"spid":"674136", "custtype":"onp"}},
+        {"customer":{"spid":"674641", "custtype":"new"}},
+		{"customer":{"spid":"674933", "custtype":"new"}},
+		{"customer":{"spid":"674936", "custtype":"new"}},
+		{"customer":{"spid":"675082", "custtype":"ams"}},
+ 		{"customer":{"spid":"675373", "custtype":"new"}},
+ 		{"customer":{"spid":"675393", "custtype":"new"}}, 
+  		{"customer":{"spid":"6755", "custtype":"new"}},
+ 		{"customer":{"spid":"677530", "custtype":"new"}}, 
+		{"customer":{"spid":"677998", "custtype":"new"}},
+		{"customer":{"spid":"678892", "custtype":"new"}},
+		{"customer":{"spid":"679084", "custtype":"new"}},
+		{"customer":{"spid":"680282", "custtype":"ams"}},
+		{"customer":{"spid":"681780", "custtype":"new"}},
+		{"customer":{"spid":"681857", "custtype":"new"}},
+		{"customer":{"spid":"682005", "custtype":"new"}},
+		{"customer":{"spid":"682894", "custtype":"new"}},
+		{"customer":{"spid":"682931", "custtype":"new"}},
+ 		{"customer":{"spid":"684153", "custtype":"new"}}, 
+		{"customer":{"spid":"684154", "custtype":"new"}},
+		{"customer":{"spid":"684231", "custtype":"new"}},
+		{"customer":{"spid":"684236", "custtype":"new"}},
+		{"customer":{"spid":"686439", "custtype":"new"}},
+		{"customer":{"spid":"686584", "custtype":"new"}},
+		{"customer":{"spid":"686607", "custtype":"new"}},
+		{"customer":{"spid":"687321", "custtype":"new"}},
+		{"customer":{"spid":"687339", "custtype":"new"}},
+		{"customer":{"spid":"687346", "custtype":"new"}},
+		{"customer":{"spid":"687348", "custtype":"new"}},
+		{"customer":{"spid":"688459", "custtype":"new"}},
+		{"customer":{"spid":"6907", "custtype":"ams"}},
+ 		{"customer":{"spid":"694145", "custtype":"new"}}, 
+ 		{"customer":{"spid":"694167", "custtype":"new"}}, 
+		{"customer":{"spid":"696363", "custtype":"new"}},
+		{"customer":{"spid":"696368", "custtype":"new"}},
+		{"customer":{"spid":"696509", "custtype":"new"}},
+		{"customer":{"spid":"697413", "custtype":"new"}},
+		{"customer":{"spid":"697422", "custtype":"new"}},
+		{"customer":{"spid":"697551", "custtype":"new"}},
+		{"customer":{"spid":"697584", "custtype":"new"}},
+		{"customer":{"spid":"698413", "custtype":"new"}},
+		{"customer":{"spid":"698705", "custtype":"new"}},
+	    {"customer":{"spid":"6996", "custtype":"onp"}},
+		{"customer":{"spid":"7083", "custtype":"onp"}},
+		{"customer":{"spid":"72221893", "custtype":"new"}},
+		{"customer":{"spid":"7245", "custtype":"ams"}},
+		{"customer":{"spid":"7370", "custtype":"new"}},
+		{"customer":{"spid":"7451", "custtype":"new"}},
+		{"customer":{"spid":"7463", "custtype":"ams"}},
+		{"customer":{"spid":"7556", "custtype":"onp"}},
+		{"customer":{"spid":"7589", "custtype":"ams"}},
+		{"customer":{"spid":"7617", "custtype":"ams"}},
+  		{"customer":{"spid":"7683", "custtype":"ams"}},
+        {"customer":{"spid":"7747", "custtype":"new"}},
+		{"customer":{"spid":"7796", "custtype":"new"}},
+		{"customer":{"spid":"7954", "custtype":"ams"}},
+		{"customer":{"spid":"81147261", "custtype":"new"}},
+		{"customer":{"spid":"8134", "custtype":"new"}},
+		{"customer":{"spid":"8145", "custtype":"new"}},
+		{"customer":{"spid":"8181", "custtype":"new"}},
+		{"customer":{"spid":"8200", "custtype":"ams"}},
+		{"customer":{"spid":"82127156", "custtype":"new"}},
+		{"customer":{"spid":"8215", "custtype":"new"}},
+		{"customer":{"spid":"8220", "custtype":"new"}},
+		{"customer":{"spid":"8244", "custtype":"ams"}},
+		{"customer":{"spid":"8253", "custtype":"new"}},
+		{"customer":{"spid":"8264", "custtype":"ams"}},
+		{"customer":{"spid":"82857944", "custtype":"new"}},
+		{"customer":{"spid":"8391", "custtype":"ams"}},
+ 		{"customer":{"spid":"8515", "custtype":"ams"}},
+		{"customer":{"spid":"8758", "custtype":"new"}},
+		{"customer":{"spid":"8778", "custtype":"onp"}},
+		{"customer":{"spid":"899", "custtype":"onp"}},
+		{"customer":{"spid":"9024", "custtype":"ams"}},
+		{"customer":{"spid":"9093", "custtype":"ams"}},
+		{"customer":{"spid":"9135", "custtype":"onp"}},
+		{"customer":{"spid":"9152", "custtype":"new"}},
+		{"customer":{"spid":"9162", "custtype":"new"}},
+		{"customer":{"spid":"9188", "custtype":"onp"}},
+		{"customer":{"spid":"924", "custtype":"ams"}},
+		{"customer":{"spid":"9250925", "custtype":"new"}},
+		{"customer":{"spid":"9345", "custtype":"new"}},
+		{"customer":{"spid":"9355", "custtype":"new"}},
+		{"customer":{"spid":"9387", "custtype":"onp"}},
+		{"customer":{"spid":"9523", "custtype":"ams"}},
+   		{"customer":{"spid":"95916150", "custtype":"new"}},
+        {"customer":{"spid":"9789", "custtype":"ams"}},
+		{"customer":{"spid":"9873", "custtype":"ams"}},
+		{"customer":{"spid":"995", "custtype":"onp"}},
+		{"customer":{"spid":"9976", "custtype":"new"}}
+	];
+</script>
+
+<style>
+td,th {
+	text-align:right;
+	padding-left:10px;
+	padding-right:5px;
+}
+table.table td,th {
+	text-align:left;
+	font-family: Adobe Clean;
+}
+table.table tr th {
+	background-color:#cccccc;
+}
+table.table tr td {
+	background-color:#efefef;
+}
+table.table tr.live td {
+	background-color:#33ff57;
+}
+table.table tr.problems td {
+	background-color:#ff9999;
+}
+
+#person {
+	padding-right:10px;
+}
+.speech-bubble {
+	position: relative;
+	background: #94e3fe;
+	border-radius: .4em;
+}
+.speech-bubble h2 {
+	padding: 20px;
+	font-family: Adobe Clean;
+}
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #94e3fe;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+}
+
+.filters {
+  font-family: Adobe Clean;
+  font-size: 16px;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: Adobe Clean;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #919191;
+}
+.button.on {
+  background-color: #0433ff;
+}
+.button.live {
+	color:black;
+	background-color:#33ff57;
+}
+.button.live.on {
+  color: white;
+  background-color: #0433ff;
+}
+.button.problems {
+	color:black;
+	background-color:#ff9999;
+}
+.button.problems.on {
+  color: white;
+  background-color: #0433ff;
+}
+.button.ams {
+	color:black;
+	background-color:#9999ff;
+}
+.button.ams.on {
+  color: white;
+  background-color: #0433ff;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.dataheader, .chartheader {
+  font-family: Adobe Clean;
+  font-style: italic;
+  padding-bottom: 16px;
+}
+
+.hide, .preview {
+	display:none;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script src='https://cdn.jsdelivr.net/npm/d3'></script>
+<script src='https://cdn.jsdelivr.net/npm/@upsetjs/venn.js'></script>
+
+<!-- header -->
+<div style="display:none;"></div>
+<table border=0>
+	<tr>
+		<td><img height=100 id="person" src=""></td>
+		<td>
+			<hgroup class="speech-bubble">
+				<h2 id="message"></h2>
+			</hgroup>
+		</td>
+	</tr>
+</table>
+<div style="display:none;"></div>
+
+<!-- tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'tabData')" id="defaultTab">Data</button>
+  <button class="tablinks" onclick="openTab(event, 'tabCharts')" id="">Charts</button>
+</div>
+
+<!-- tab content -->
+<div id="tabCharts" class="tabcontent">
+	<button class="chart button on" onclick="changeChart(this, 'from');" id="chartfrom">From</button>
+	<button class="chart button on" onclick="changeChart(this, 'fromhistory');">From History</button>
+	<button class="chart button off" onclick="changeChart(this, 'live');">Live</button>
+	<button class="chart button off" onclick="changeChart(this, 'geo');">Geo</button>
+	<button class="chart button off" onclick="changeChart(this, 'solution');">Solution</button>
+	<button class="chart button off" onclick="changeChart(this, 'partner');">Selling Partner</button>
+	<button class="chart button off" onclick="changeChart(this, 'ps');">Premier Support</button>
+	<button class="chart button off" onclick="changeChart(this, 'history');">License History</button>
+	<button class="chart button off" onclick="changeChart(this, 'livehistory');">Live History</button>
+	<button class="chart button off" onclick="changeChart(this, 'assetslivehistory');">Assets Live History</button>
+	<button class="chart button off" onclick="changeChart(this, 'contracttolive');">Contract to Live</button>
+	<button class="chart button off hide" onclick="changeChart(this, 'h1goal');">2021 H1 Goal</button>
+	<button class="chart button off" onclick="changeChart(this, 'h2goal');">H2 Goal - 290 Customers</button>
+	<button class="chart button off" onclick="changeChart(this, 'h2goallive');">H2 Goal - 190 Live</button>
+ 	<button class="chart button off" onclick="changeChart(this, 'h122goallive');">H1 Goal - 160 New Live</button> 
+
+
+	<div class="chartheader"></div>
+	<div id="chart"></div>
+	<div id="venn"></div>
+</div>
+
+<div id="tabData" class="tabcontent">
+	<div class="dataheader">
+		Last updated <span id="lastUpdated"></span>. INTERNAL USE ONLY.
+		Only contracts including a production license are listed, and customers may have Cloud Service-related activity in other contracts.
+		Salesforce access required to view the contracts.  Premier Support status may not be 100% accurate.
+		Service start and end dates are not considered for this list, all closed contracts are included.
+		Live data comes from ServiceNow and may not be 100% accurate.
+		Deal size is not fully accurate and should be considered on a relative basis.
+		The intent is S (<100K), M (<250K), L (<1M), and ExL (>1M).
+		Depending on contract structure, some deals will look larger on this dashboard than they actually are.
+	</div>
+
+	<span class="filters">
+		<b>Filters:</b>
+		(<span id="shown"></span> of <span id="total"></span>)
+	</span>
+	<button class="filter button" onclick="changeFilter(this, 'all');" id="filterall">Show all</button>
+	<button class="filter button" onclick="changeFilter(this, 'sites');">Sites</button>
+	<button class="filter button" onclick="changeFilter(this, 'assets');">Assets</button>
+	<button class="filter button" onclick="changeFilter(this, 'assetsnosites');">Assets w/o Sites</button>
+	<button class="filter button" onclick="changeFilter(this, 'assetsessentials');">Assets Essentials</button>
+	<button class="filter button" onclick="changeFilter(this, 'assetscontentautomation');">Assets Content Automation</button>
+    <button class="filter button" onclick="changeFilter(this, 'forms');">Forms</button>
+	<button class="filter button" onclick="changeFilter(this, 'cif');">CIF</button>
+	<button class="filter button" onclick="changeFilter(this, 'screens');">Screens</button>
+	<button class="filter button" onclick="changeFilter(this, 'nops');">No Premier Support</button>
+	<button class="filter button" onclick="changeFilter(this, 'ams');">From AMS</button>
+	<button class="filter button" onclick="changeFilter(this, 'onp');">From On-Premise</button>
+	<button class="filter button" onclick="changeFilter(this, 'new');">New to AEM</button>
+	<button class="filter button" onclick="changeFilter(this, 'tbd');" id="btnTBD">Uncategorized</button>
+	<button class="filter button live" onclick="changeFilter(this, 'live');">Live</button>
+	<button class="filter button live" onclick="changeFilter(this, 'livesites');">Live Sites</button>
+	<button class="filter button live" onclick="changeFilter(this, 'liveassets');">Live Assets</button>
+	<button class="filter button live" onclick="changeFilter(this, 'livecif');">Live CIF</button>
+	<button class="filter button live" onclick="changeFilter(this, 'livethisweek');">Live This Week</button>
+	<button class="filter button live" onclick="changeFilter(this, 'livelastweek');">Live Last Week</button>
+	<button class="filter button" onclick="changeFilter(this, 'thisweek');">This Week</button>
+	<button class="filter button" onclick="changeFilter(this, 'lastweek');">Last Week</button>
+	<button class="filter button" onclick="changeFilter(this, 'lastweeksites');">Last Week Sites</button>
+	<button class="filter button" onclick="changeFilter(this, 'lastweekassets');">Last Week Assets</button>
+	<button class="filter button" onclick="changeFilter(this, '2021h1');" style="display:none;">2021 - H1</button>
+	<button class="filter button" onclick="changeFilter(this, '2021h2');" style="display:none;">2021 - H2</button>
+	<button class="filter button" onclick="changeFilter(this, '2022h1new');">New 2022 H1</button>
+	<button class="filter button" onclick="changeFilter(this, '2022q1new');">New 2022 Q1</button>
+	<button class="filter button" onclick="changeFilter(this, '2022q2new');">New 2022 Q2</button>
+	<button class="filter button" onclick="changeFilter(this, '2021q2');" style="display:none;">2021 - Q2</button>
+	<button class="filter button" onclick="changeFilter(this, '2021q3');" style="display:none;">2021 - Q3</button>
+	<button class="filter button" onclick="changeFilter(this, 'yrnotlive');">1yr Not Live</button>
+	<button class="filter button" onclick="changeFilter(this, 'multiple');">Multiple Subsidiaries</button>
+
+<button class="filter button" onclick="changeFilter(this, 'americas');">Americas</button>
+<button class="filter button" onclick="changeFilter(this, 'apac');">APAC</button>
+<button class="filter button" onclick="changeFilter(this, 'emea');">EMEA</button>
+<button class="filter button" onclick="changeFilter(this, 'japan');">Japan</button>
+
+	<button class="filter button problems" onclick="changeFilter(this, 'problems');" id="btnProblems">Not Usable</button>
+	<button class="filter button ams" onclick="changeFilter(this, 'amsfull');" id="btnAms1">AMS List</button>
+	<button class="filter button ams" onclick="changeFilter(this, 'amsboth');" id="btnAms2">AMS List Matches Wiki</button>
+	<button class="filter button ams" onclick="changeFilter(this, 'amsmatchleft');" id="btnAms3">AMS List Yes, Wiki No</button>
+	<button class="filter button ams" onclick="changeFilter(this, 'amsmatchright');" id="btnAms4">AMS List No, Wiki Yes</button>
+
+	<div class="container" style="padding:10px 10px;">
+		<div class="well">
+			<div class="row" id="csv-display" style="height:450px; overflow:scroll;"></div>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+var attachmentFolder = "/download/attachments/1954698689/";
+var imgFolder = "/download/thumbnails/1954698689/";
+$("#person").attr("src", imgFolder + "gillian.jpg");
+$("#message").html("Welcome to the Customer Lookup App for AEM as a Cloud Service!");
+
+// retrieve ps data from SNOW
+// occasionally this is empty on the table due to asynch timing issue
+// TODO adjust variable names
+var livedata;
+var liveloaded = false;
+$.ajax({
+	type: "GET",
+	url: attachmentFolder + "ps.csv",
+	dataType: "text",       
+	success: function(response) {
+		livedata = $.csv.toArrays(response);
+		liveloaded = true;
+	}  
+});
+
+// retrieve AMS data from Pierre list
+var amsdata;
+var amsloaded = false;
+$.ajax({
+	type: "GET",
+	url: attachmentFolder + "ams.csv",
+	dataType: "text",       
+	success: function(response) {
+		amsdata = $.csv.toArrays(response);
+		amsloaded = true;
+	}  
+});
+
+// retrieve live data from PowerBI dashboard
+// occasionally this is empty on the table due to asynch timing issue
+var live2data;
+var live2loaded = false;
+$.ajax({
+	type: "GET",
+	url: attachmentFolder + "livedata.csv",
+	dataType: "text",       
+	success: function(response) {
+		live2data = $.csv.toArrays(response);
+		live2loaded = true;
+	}  
+});
+
+// retrieve customer data from Salesforce report
+var csdata;
+$.ajax({
+	type: "GET",
+	url: attachmentFolder + "report.csv",
+	dataType: "text",       
+	success: function(response) {
+		csdata = $.csv.toArrays(response);
+		// pause to give time for premier support and SNOW data to load
+		setTimeout(null,1000);
+		generateHtmlTable(csdata);
+		
+	}  
+});
+
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.load('current', {'packages':['sankey']});
+google.charts.load('current', {'packages':['treemap']});
+
+// Draw the chart and set the chart values
+function drawFromChart() {
+	var froms = [
+		["From", "Customers"],
+		["AMS to CS", $(".table tbody td.custtype:contains('ams')").length],
+		["On-Prem to CS", $(".table tbody td.custtype:contains('onp')").length],
+		["New to CS", $(".table tbody td.custtype:contains('new')").length],
+	];
+	
+	var data = google.visualization.arrayToDataTable(froms);
+
+	var options = {
+		width: 600,
+		height: 400,
+		is3D: true,
+		fontName: "Adobe Clean",
+		fontSize: 16
+	};
+
+	var chart = new google.visualization.PieChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawFromHistoryChart() {
+	var customers = [["Date", "AMS to CS", "On-Prem to CS", "New to CS"]];
+	var total = [["onp",0],["ams",0],["new",0]];
+	var date = new Date();
+	date.setFullYear(2020);
+	date.setMonth(0);
+	date.setDate(1);
+	var checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+	var currDate = new Date();
+	var i = 0;
+
+	// loop dates from approximately Cloud Service GA until current date
+	do {
+		checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+		var checkDateStr = checkDate.getMonth()+1 + '/' + checkDate.getDate() + '/' + checkDate.getFullYear();
+
+		$(".table tbody td.closedate:contains('" + checkDateStr + "')").each(function() {
+			var matchDates = $(this).html();
+			var matchDateList = matchDates.split("<br>");
+			/*
+			// proper approach is to sort by dates and only increment on the first contract for a customer
+			// below approach does not do that
+			for (y=0;y<matchDateList.length;y++) {
+				var matchDate = matchDateList[y];
+				if (matchDate==checkDateStr) {
+					//console.log(matchDate);
+					total++;
+				}
+			}
+			*/
+			// TODO could use better logic, this is accurate at the end
+			// and close but not fully accurate along the way
+			// best approach would be to refactor the JSON to be an array instead of string<br>string
+/*
+			var matchDate = matchDateList[0];
+			if (matchDate==checkDateStr) {
+				var from = $(this).parent().find("td.custtype").html();
+				//console.log(matchDate + ":::" + from);
+				if (from=="ams") {total[0][1]++;}
+				if (from=="onp") {total[1][1]++;}
+				if (from=="new") {total[2][1]++;}
+			}
+*/
+ 			for (y=0;y<matchDateList.length;y++) {
+				var matchDate = matchDateList[y];
+				if (matchDate==checkDateStr) {
+					var from = $(this).parent().find("td.custtype").html();
+					//console.log(matchDate + ":::" + from);
+					if (from=="ams") {total[0][1]++;}
+					if (from=="onp") {total[1][1]++;}
+					if (from=="new") {total[2][1]++;}
+				}
+			}
+	    });
+
+		if (checkDate <= currDate) {
+			customers.push([checkDate, total[0][1], total[1][1], total[2][1]]);
+		}
+		i++;
+	} while (checkDate <= currDate);
+
+	var data = google.visualization.arrayToDataTable(customers);
+
+	var options = {
+		height: 400,
+		width: "100%",
+		isStacked: "percent",
+		hAxis: {title: ''},
+		vAxis: {title: 'Percentage'},
+		legend: {position: 'bottom'},
+		fontName: "Adobe Clean",
+		fontSize: 16
+	};
+
+	var chart = new google.visualization.AreaChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawLiveChart() {
+	var data = new google.visualization.DataTable();
+	data.addColumn('string', 'From');
+	data.addColumn('string', 'To');
+	data.addColumn('number', 'Count');
+	data.addRows([
+		['AMS', 'Live', $(".table tbody tr[class*='live'] td.custtype:contains('ams')").length],
+		['AMS', 'Not Live', $(".table tbody tr[class!='live'] td.custtype:contains('ams')").length],
+		['On-Prem', 'Live', $(".table tbody tr[class*='live'] td.custtype:contains('onp')").length],
+		['On-Prem', 'Not Live', $(".table tbody tr[class!='live'] td.custtype:contains('onp')").length],
+		['New', 'Live', $(".table tbody tr[class*='live'] td.custtype:contains('new')").length],
+		['New', 'Not Live', $(".table tbody tr[class!='live'] td.custtype:contains('new')").length]
+	]);
+
+	var options = {
+		width: 600,
+		height: 400,
+		sankey: {
+			node: {
+				label: {
+					fontName: 'Adobe Clean',
+					fontSize: 16,
+				}
+			}
+		}
+	};
+
+	var chart = new google.visualization.Sankey(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawGeoChart() {
+	var geos = [["Geo", "Parent", "Customers"]];
+	geos.push(["Global", null, 0]);
+	geos.push(["Americas", "Global", $(".table tbody td.geo:contains('Americas')").length]);
+	geos.push(["EMEA", "Global", $(".table tbody td.geo:contains('EMEA')").length]);
+	geos.push(["APAC", "Global", $(".table tbody td.geo:contains('APAC')").length]);
+	geos.push(["Japan", "Global", $(".table tbody td.geo:contains('Japan')").length]);
+	
+	$(".table tbody td.country").each(function() {
+		var countries = $(this).html();
+		var countryList = countries.split(" ");
+		for (y=0;y<countryList.length;y++) {
+			var country = countryList[y];
+			var countryFound = false;
+			for (i=0;i<geos.length;i++) {
+				if (geos[i][0]==country) {
+					// increment country count
+					countryFound = true;
+					geos[i][2]++;
+					break;
+				}
+			}
+			if (!countryFound) {
+				// add geo to array with count 1
+				geos.push([country, getGeo(country), 1]);
+			}
+		}
+	});
+
+	var data = google.visualization.arrayToDataTable(geos);
+
+	var options = {
+		width: 600,
+		height: 400,
+        maxDepth: 1,
+        maxPostDepth: 2,
+		showScale: true,
+		fontFamily: "Adobe Clean",
+		fontSize: 16,
+		fontColor: "#ffffff",
+		headerColor: "#919191"
+	};
+
+	tree = new google.visualization.TreeMap(document.getElementById('chart'));
+	tree.draw(data, options);
+}
+
+function getGeo(country) {
+	var geo = "Global";
+	switch (country) {
+		case "US":
+		case "CA":
+		case "CL":
+		case "CO":
+		case "PE":
+		case "AR":
+		case "BR":
+		case "PR":
+		case "BM":
+			geo = "Americas";
+			break;
+		case "CH":
+		case "GB":
+		case "DE":
+		case "SE":
+		case "ES":
+		case "FR":
+		case "PT":
+		case "DK":
+		case "BE":
+		case "IE":
+		case "IT":
+		case "AE":
+		case "MT":
+		case "ZA":
+		case "PL":
+		case "NL":
+		case "LU":
+		case "QA":
+		case "AT":
+		case "SA":
+		case "TR":
+		case "NO":
+			geo = "EMEA";
+			break;
+		case "AU":
+		case "IN":
+		case "NZ":
+		case "TH":
+		case "HK":
+		case "SG":
+		case "MY":
+		case "TW":
+		case "CN":
+		case "KR":
+			geo = "APAC";
+			break;
+		case "JP":
+			geo = "Japan";
+			break;
+	}
+	return geo
+}
+
+// Draw the chart and set the chart values
+function drawSolutionChart() {
+	// define sets and set intersections
+	var sitesAssetsCIF = $(".table tbody td.solutions:contains('Sites Assets CIF')").length;
+	var sitesForms = $(".table tbody td.solutions:contains('Sites Forms')").length;
+	var sitesCIF = $(".table tbody td.solutions:contains('Sites CIF')").length + sitesAssetsCIF;
+	var sitesAssets = $(".table tbody td.solutions:contains('Sites Assets')").length;
+	var sites = $(".table tbody td.solutions:contains('Sites')").length;
+	var assets = $(".table tbody td.solutions:contains('Assets')").length;
+	var forms = $(".table tbody td.solutions:contains('Forms')").length;
+	var cif = $(".table tbody td.solutions:contains('CIF')").length;
+
+	sets = [
+		{sets: ['Sites'], size: sites},
+		{sets: ['Assets'], size: assets},
+		{sets: ['Forms'], size: forms},
+		{sets: ['CIF'], size: cif},
+		{sets: ['Sites', 'Assets'], size: sitesAssets},
+		{sets: ['Sites', 'Forms'], size: sitesForms},
+		{sets: ['Sites', 'CIF'], size: sitesCIF},
+		{sets: ['Sites', 'Assets', 'CIF'], size: sitesAssetsCIF}
+	];
+
+	d3.select('#venn').datum(sets).call(vchart);
+}
+
+// Draw the chart and set the chart values
+function drawPartnerChart() {
+	var partners = [["Partner", "Parent", "Customers"]];
+	partners.push(["Partners with...", null, 0]);
+	partners.push(["1 customer", "Partners with...", 0]);
+	partners.push(["2 customers", "Partners with...", 0]);
+	partners.push(["3+ customers", "Partners with...", 0]);
+	partners.push(["Accenture", "3+ customers", 0]);
+	partners.push(["Avanade ", "3+ customers", 0]);
+	partners.push(["Capgemini", "3+ customers", 0]);
+	partners.push(["Cognizant", "3+ customers", 0]);
+	partners.push(["Deloitte", "3+ customers", 0]);
+	partners.push(["diva-e", "3+ customers", 0]);
+	partners.push(["everis", "2 customers", 0]);
+	partners.push(["EY", "3+ customers", 0]);
+	partners.push(["IBM", "3+ customers", 0]);
+	partners.push(["Infosys", "3+ customers", 0]);
+	partners.push(["Isobar ", "2 customers", 0]);
+	//partners.push(["MediaMonks ", "3+ customers", 0]);
+	partners.push(["Merkle", "3+ customers", 0]);
+	partners.push(["Publicis", "3+ customers", 0]);
+	partners.push(["PWC ", "2 customers", 0]);
+	partners.push(["WPP ", "3+ customers", 0]);
+	
+	$(".table tbody td.sellingpartner").each(function() {
+		var sellingpartners = $(this).html();
+		var partnerList = sellingpartners.split("<br>");
+		for (y=0;y<partnerList.length;y++) {
+			var partner = partnerList[y];
+			var partnerFound = false;
+			for (i=0;i<partners.length;i++) {
+				if (partners[i][0]==partner) {
+					// increment partner count
+					partnerFound = true;
+					partners[i][2]++;
+					break;
+				}
+			}
+			if (!partnerFound) {
+				// add partner to array with count 1
+				var parent = getParentPartner(partner);
+				partners.push([partner, parent, 1]);
+			}
+		}
+	});
+
+	// loop through partners, categorize, and add count to label
+	// every time a new partner group is added above, adjust k start value
+	for (k=20; k<partners.length; k++) {
+		var parent = partners[k][1];
+		var partnerCount = partners[k][2];
+		if (parent=="1 customer") {
+			if (partnerCount==1) {
+				partners[k][1] = "1 customer";
+			} else if (partnerCount==2) {
+				partners[k][1] = "2 customers";
+			} else {
+				partners[k][1] = "3+ customers";
+			}
+		}
+		if (partners[k][0]!="") {
+			partners[k][0] += " (" + partnerCount + ")";
+		}
+	}
+
+	// loop through parent partners and aggregate children
+	// every time a new partner group is added above, adjust l end value
+	for (l=5; l<21; l++) {
+		var origPartner = partners[l][0];
+		var newPartner = origPartner;
+		var parent = partners[l][1];
+		var parentCount = 0;
+
+		// add to parent total
+		for (m=13; m<partners.length; m++) {
+			if (partners[m][1]==origPartner) {
+				partners[l][2]+=partners[m][2];
+			}
+		}
+
+		// parent name changes
+		newPartner = origPartner + " (" + partners[l][2] + ")";
+		if (partners[l][0]!="") {
+			partners[l][0] = newPartner;
+		}
+
+		// reference new parent name from children
+		for (n=13; n<partners.length; n++) {
+			if (partners[n][1]==origPartner) {
+				partners[n][1] = newPartner;
+			}
+		}
+
+	}
+
+	var data = google.visualization.arrayToDataTable(partners);
+
+	var options = {
+		width: "100%",
+		height: 400,
+        maxDepth: 1,
+        maxPostDepth: 2,
+		showScale: true,
+		fontFamily: "Adobe Clean",
+		fontSize: 14,
+		fontColor: "#ffffff",
+		headerColor: "#919191"
+	};
+
+	tree = new google.visualization.TreeMap(document.getElementById('chart'));
+	tree.draw(data, options);
+}
+
+function getParentPartner(partner) {
+	var parent = "1 customer";
+	switch (partner) {
+		case "Accenture (UK) Limited":
+		case "Accenture AB":
+		case "Accenture AG":
+		case "Accenture Australia":
+		case "Accenture B.V.":
+		case "Accenture do Brasil Ltda":
+		case "Accenture PLC":
+		case "Accenture SG Services Pte Ltd":
+		case "Accenture SL":
+		case "Accenture SPA":
+		case "Accenture SAS":
+		case "Accenture Dienstleistungen GmbH":
+			parent = "Accenture";
+			break;
+		case "Avanade":
+		case "Avanade Australia":
+		case "Avanade Spain":
+			parent = "Avanade ";
+			break;
+		case "Capgemini (global)":
+		case "Capgemini Australia":
+		case "Capgemini Belgium":
+		case "Capgemini Espana SLU":
+		case "Capgemini Italia":
+		case "Capgemini Nederland B.V.":
+		case "Capgemini Technologies LLC":
+		case "Capgemini Technology Services":
+		case "Capgemini Italia S.P.A.":
+			parent = "Capgemini";
+			break;
+		case "Cognizant Technology Solutions":
+		case "Netcentric AG":
+			parent = "Cognizant";
+			break;
+		case "Deloitte Consulting":
+		case "Deloitte MCS Ltd":
+			parent = "Deloitte";
+			break;
+		case "diva-e Digital Value Excellence GmbH":
+		case "pro!vision GmbH":
+			parent = "diva-e";
+			break;
+		case "everis Chile S.A":
+		case "Everis Spain, S.L.U":
+			parent = "everis";
+			break;
+		case "Ernst &amp; Young LLP":
+		case "Ernst &amp; Young LLP U.S.":
+		case "Zilker Technology":
+			parent = "EY";
+			break;
+		case "Ecx.Io Austria Gmbh":
+		case "ecx.io germany GmbH":
+		case "ecx.io Ltd":
+		case "IBM Interactive Experience":
+		case "IBM North America":
+		case "IBM Uk":
+		case "IBM iX Switzerland":
+		case "IBM Italia":
+		case "IBM Taiwan Corporation":
+			parent = "IBM";
+			break;
+		case "Blue Acorn iCi":
+		case "Infosys Limited":
+		case "Infosys Technologies Ltd":
+			parent = "Infosys";
+			break;
+		case "Isobar":
+		case "Isobar Australia":
+		case "Isobar Communications Pty Ltd":
+		case "Isobar Poland":
+		case "Isobar Taiwan":
+			parent = "Isobar ";
+			break;
+//		case "MediaMonks":
+//		case "MediaMonks Australia Pty Ltd":
+//			parent = "MediaMonks ";
+//			break;
+		case "Merkle.":
+		case "Merkle UK One Limited":
+		case "Namics AG":
+		case "Merkle ANZ Pty Ltd":
+			parent = "Merkle";
+			break;
+		case "3SHARE":
+		case "Publicis Comms Americas":
+		case "Publicis Groupe":
+		case "Publicis Sapient Americas":
+		case "Publicis Sapient APAC":
+		case "Publicis Sapient EMEA":
+		case "Razorfish":
+		case "SapientRazorfish":
+			parent = "Publicis";
+			break;
+		case "Pwc":
+		case "PwC US":
+		case "PwC Australia":
+		case "PWC":
+		case "PwC Enterprise Advisory BV/SRL":
+			parent = "PWC ";
+			break;
+		case "The Cocktail Experience S.L.":
+		case "WPP":
+			parent = "WPP ";
+			break;
+	}
+	return parent;
+}
+
+// Draw the chart and set the chart values
+function drawPSChart() {
+	var pslevels = [
+		["PS Level", "Customers"],
+		["Enterprise", $(".table tbody td.ps:contains('Enterprise')").length],
+		["Elite", $(".table tbody td.ps:contains('Elite')").length - $(".table tbody td.ps:contains('Elite Plus')").length],
+		["Elite Plus", $(".table tbody td.ps:contains('Elite Plus')").length],
+		["None / Business", $(".table tbody td.ps:empty").length]
+	];
+	
+	var data = google.visualization.arrayToDataTable(pslevels);
+
+	var options = {
+		width: 600,
+		height: 400,
+		slices: {3: {offset: 0.3}},
+		is3D: true,
+		fontName: "Adobe Clean",
+		fontSize: 16
+	};
+
+	var chart = new google.visualization.PieChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawLicenseHistoryChart() {
+	var customers = [];
+	var total = 0;
+	var date = new Date();
+	date.setFullYear(2020);
+	date.setMonth(0);
+	date.setDate(1);
+	var checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+	var currDate = new Date();
+	var i = 0;
+
+	// loop dates from approximately Cloud Service GA until current date
+	do {
+		checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+		var checkDateStr = checkDate.getMonth()+1 + '/' + checkDate.getDate() + '/' + checkDate.getFullYear();
+
+		$(".table tbody td.closedate:contains('" + checkDateStr + "')").each(function() {
+			var matchDates = $(this).html();
+			var matchDateList = matchDates.split("<br>");
+			/**/
+			// proper approach is to sort by dates and only increment on the first contract for a customer
+			// below approach does not do that
+			for (y=0;y<matchDateList.length;y++) {
+				var matchDate = matchDateList[y];
+				if (matchDate==checkDateStr) {
+					// console.log(matchDate);
+					total++;
+				}
+			}
+			/**/
+			// TODO could use better logic, this is accurate at the end
+			// and close but not fully accurate along the way
+			// best approach would be to refactor the JSON to be an array instead of string<br>string
+/*
+			var matchDate = matchDateList[0];
+			if (matchDate==checkDateStr) {
+				//console.log(matchDate);
+				total++;
+			}
+*/
+		});
+
+		if (checkDate <= currDate) {
+			customers.push([checkDate, total]);
+		}
+		i++;
+	} while (checkDate <= currDate);
+
+	var data = new google.visualization.DataTable();
+	data.addColumn('date', '');
+	data.addColumn('number', 'Customers');
+	data.addRows(customers);
+
+	var options = {
+		height: 400,
+		width: "100%",
+		hAxis: {title: ''},
+		vAxis: {title: 'Customers'},
+		legend: {position: 'bottom'},
+		fontName: "Adobe Clean",
+		fontSize: 16
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawLiveHistoryChart() {
+	var customers = [];
+	var total = 0;
+	// start at 3 to account for 2019 go-lives
+	var totalLive = 3;
+	var date = new Date();
+	date.setFullYear(2020);
+	date.setMonth(0);
+	date.setDate(1);
+	var checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+	var currDate = new Date();
+	var i = 0;
+
+	// loop dates from approximately Cloud Service GA until current date
+	do {
+		checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+		var checkDateStr = checkDate.getMonth()+1 + '/' + checkDate.getDate() + '/' + checkDate.getFullYear();
+		$(".table tbody td.closedate:contains('" + checkDateStr + "')").each(function() {
+			var matchDates = $(this).html();
+			var matchDateList = matchDates.split("<br>");
+			/**/
+			// proper approach is to sort by dates and only increment on the first contract for a customer
+			// below approach does not do that
+			for (y=0;y<matchDateList.length;y++) {
+				var matchDate = matchDateList[y];
+				if (matchDate==checkDateStr) {
+					// console.log(matchDate);
+					total++;
+				}
+			}
+			/**/
+			// TODO could use better logic, this is accurate at the end
+			// and close but not fully accurate along the way
+			// best approach would be to refactor the JSON to be an array instead of string<br>string
+/*
+			var matchDate = matchDateList[0];
+console.log("checkDateStr:::" + checkDateStr + " /// matchDate:::" + matchDate);
+			if (matchDate==checkDateStr) {
+				//console.log(matchDate);
+				total++;
+			}
+*/
+		});
+
+		$(".table tbody td.livedate:contains('" + checkDateStr + "')").each(function() {
+			var matchDate = $(this).html();
+			if (matchDate==checkDateStr) {
+				// console.log(matchDate);
+				totalLive++;
+			}
+		});
+
+		if (checkDate <= currDate) {
+			customers.push([checkDate, total, totalLive]);
+		}
+		i++;
+	} while (checkDate <= currDate);
+
+	var data = new google.visualization.DataTable();
+	data.addColumn('date', '');
+	data.addColumn('number', 'Customers');
+	data.addColumn('number', 'Live');
+	data.addRows(customers);
+
+	var options = {
+		height: 400,
+		width: "100%",
+		hAxis: {title: ''},
+		vAxis: {title: 'Customers'},
+		series: {1: {type: 'area', color: '#33ff57', areaOpacity: 0.6}},
+		legend: {position: 'bottom'},
+		fontName: "Adobe Clean",
+		fontSize: 16
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawAssetsLiveHistoryChart() {
+	var customers = [];
+	var total = 0;
+	// start at 2 to account for 2019 go-lives
+	var totalLive = 2;
+	var date = new Date();
+	date.setFullYear(2020);
+	date.setMonth(0);
+	date.setDate(1);
+	var checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+	var currDate = new Date();
+	var i = 0;
+
+	// loop dates from approximately Cloud Service GA until current date
+	do {
+		checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+		var checkDateStr = checkDate.getMonth()+1 + '/' + checkDate.getDate() + '/' + checkDate.getFullYear();
+
+		$(".table tbody td.closedate:contains('" + checkDateStr + "')").each(function() {
+			var matchDates = $(this).html();
+			var hasAssets = $(this).parent().html().includes("Assets");
+			if (hasAssets) {
+				var matchDateList = matchDates.split("<br>");
+				/**/
+				// proper approach is to sort by dates and only increment on the first contract for a customer
+				// below approach does not do that
+				for (y=0;y<matchDateList.length;y++) {
+					var matchDate = matchDateList[y];
+					if (matchDate==checkDateStr) {
+						// console.log(matchDate);
+						total++;
+					}
+				}
+				/**/
+				// TODO could use better logic, this is accurate at the end
+				// and close but not fully accurate along the way
+				// best approach would be to refactor the JSON to be an array instead of string<br>string
+
+/*
+		var closeDateList = closeDates.split("<br>");
+		var firstCloseDate = new Date();
+		var firstCloseDateStr = "";
+	
+		for (y=0;y<closeDateList.length;y++) {
+			var closeDateStr = closeDateList[y];
+			var closeDate = new Date(parseInt(closeDateStr.split("/")[2]), parseInt(closeDateStr.split("/")[0])-1, parseInt(closeDateStr.split("/")[1]));
+			if (closeDate < firstCloseDate) {
+				firstCloseDate = closeDate;
+				firstCloseDateStr = closeDateStr;
+			}
+		}
+*/
+/*
+				var matchDate = matchDateList[0];
+				if (matchDate==checkDateStr) {
+					//console.log(matchDate);
+					total++;
+				}
+*/
+			}
+		});
+
+		$(".table tbody td.livedate:contains('" + checkDateStr + "')").each(function() {
+			var matchDate = $(this).html();
+			var hasAssets = $(this).parent().html().includes("Assets");
+			if (hasAssets) {
+				if (matchDate==checkDateStr) {
+					// console.log(matchDate);
+					totalLive++;
+				}
+			}
+		});
+
+		if (checkDate <= currDate) {
+			customers.push([checkDate, total, totalLive]);
+		}
+		i++;
+	} while (checkDate <= currDate);
+
+	var data = new google.visualization.DataTable();
+	data.addColumn('date', '');
+	data.addColumn('number', 'Customers');
+	data.addColumn('number', 'Live');
+	data.addRows(customers);
+
+	var options = {
+		height: 400,
+		width: "100%",
+		hAxis: {title: ''},
+		vAxis: {title: 'Customers'},
+		series: {1: {type: 'area', color: '#33ff57', areaOpacity: 0.6}},
+		legend: {position: 'bottom'},
+		fontName: "Adobe Clean",
+		fontSize: 16
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+
+// Draw the chart and set the chart values
+function drawContractToLiveChart() {
+	var customers = [];
+	var startDate = new Date(2020,5,1);
+
+	$(".table tbody td.livedate:contains('/')").each(function() {
+		var liveDateStr = $(this).html();
+		var liveDate = new Date(parseInt(liveDateStr.split("/")[2]), parseInt(liveDateStr.split("/")[0])-1, parseInt(liveDateStr.split("/")[1]));
+		var duration = 0;
+		var closeDates = $(this).parent().find("td.closedate").html();
+		var account = $(this).parent().find("td.account").html();
+		var closeDateList = closeDates.split("<br>");
+		var firstCloseDate = new Date();
+		var firstCloseDateStr = "";
+	
+		for (y=0;y<closeDateList.length;y++) {
+			var closeDateStr = closeDateList[y];
+			var closeDate = new Date(parseInt(closeDateStr.split("/")[2]), parseInt(closeDateStr.split("/")[0])-1, parseInt(closeDateStr.split("/")[1]));
+			if (closeDate < firstCloseDate) {
+				firstCloseDate = closeDate;
+				firstCloseDateStr = closeDateStr;
+			}
+		}
+
+		duration = (liveDate-firstCloseDate) / (1000*60*60*24);
+
+		if (duration > 0) {
+			customers.push([liveDate, duration, account + "<br>Contract: " + firstCloseDateStr + "<br>Live: " + liveDateStr]);
+		}
+	});
+
+	var data = new google.visualization.DataTable();
+	data.addColumn('date', '');
+	data.addColumn('number', 'Customer Go-Live');
+	data.addColumn({type: 'string', role: 'tooltip', p: {'html': true}});
+	data.addRows(customers);
+
+	var options = {
+		height: 400,
+		width: "100%",
+		hAxis: {title: '', minValue: startDate, maxValue: new Date()},
+		vAxis: {title: 'Duration (in days)', minValue: 0},
+		legend: {position: 'bottom'},
+		fontName: "Adobe Clean",
+		fontSize: 16,
+		trendlines: { 0: {
+			type: 'polynomial',
+			visibleInLegend: true,
+			labelInLegend: 'Trend',
+        	degree: 2}
+		},
+		tooltip: {isHtml: true}
+	};
+
+	//var chart = new google.visualization.LineChart(document.getElementById('chart'));
+	var chart = new google.visualization.ScatterChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawH1GoalChart() {
+	var goal = 134;
+	var customers = [];
+	var progress = 0;
+	var date = new Date();
+	date.setFullYear(2020);
+	date.setMonth(11);
+	date.setDate(1);
+	var checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+	var currDate = new Date();
+	var endDate = new Date();
+	endDate.setFullYear(2021);
+	endDate.setMonth(5);
+	endDate.setDate(5);
+	var endDate = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+	var i = 0;
+
+	// hide all dates for table calculation
+	$(".table tbody tr").hide();
+	var totalcustomers = parseInt(document.getElementById("total").innerHTML);
+
+	// loop dates from H2 2021 start until current date
+	do {
+		checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+		var checkDateStr = checkDate.getMonth()+1 + '/' + checkDate.getDate() + '/' + checkDate.getFullYear();
+
+		$(".table tbody td.closedate:contains('" + checkDateStr + "')").each(function() {
+			// exclude from AMS customers as they were not part of the H1 goal
+			if ($(this).parent().find("td.custtype").html()!="ams") {
+				$(this).parent().show();
+			}
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			progress = totalcustomers - hidden;
+		});
+
+		if (checkDate <= currDate) {
+			customers.push([checkDate, progress, goal]);
+		} else if (checkDate <= endDate) {
+			customers.push([checkDate, null, goal]);
+		}
+		i++;
+	} while (checkDate <= endDate);
+
+	var data = new google.visualization.DataTable();
+	data.addColumn('date', '');
+	data.addColumn('number', 'Customers');
+	data.addColumn('number', 'Goal');
+	data.addRows(customers);
+
+	var options = {
+		height: 400,
+		width: "100%",
+		hAxis: {title: ''},
+		vAxis: {title: 'Customers'},
+		legend: {position: 'bottom'},
+		fontName: "Adobe Clean",
+		fontSize: 16
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawH2GoalChart() {
+	var goal = 290;
+	var ontrack = 0;
+	var customers = [];
+	var progress = 0;
+	var date = new Date();
+	date.setFullYear(2021);
+	date.setMonth(5);
+	date.setDate(6);
+	var checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+	var currDate = new Date();
+	var endDate = new Date();
+	endDate.setFullYear(2021);
+	endDate.setMonth(11);
+	endDate.setDate(6);
+	var endDate = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+	var i = 0;
+
+	// hide all dates for table calculation
+	$(".table tbody tr").hide();
+	var totalcustomers = parseInt(document.getElementById("total").innerHTML);
+
+	// loop dates from H2 2021 start until current date
+	do {
+		checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+		var checkDateStr = checkDate.getMonth()+1 + '/' + checkDate.getDate() + '/' + checkDate.getFullYear();
+
+		$(".table tbody td.closedate:contains('" + checkDateStr + "')").each(function() {
+			$(this).parent().show();
+			// do not include customers licensed in prior quarters
+			$(".table tbody td.quarter:contains('2020 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q2')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q3')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q4')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q2')").parent().hide();
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			progress = totalcustomers - hidden;
+		});
+
+		ontrack = i * 290 / (7*26);
+
+		if (checkDate <= currDate) {
+			customers.push([checkDate, progress, goal, ontrack]);
+		} else if (checkDate <= endDate) {
+			customers.push([checkDate, null, goal, ontrack]);
+		}
+		i++;
+	} while (checkDate <= endDate);
+
+	var data = new google.visualization.DataTable();
+	data.addColumn('date', '');
+	data.addColumn('number', 'Customers');
+	data.addColumn('number', 'Goal');
+	data.addColumn('number', 'On Target');
+	data.addRows(customers);
+
+	var options = {
+		height: 400,
+		width: "100%",
+		hAxis: {title: ''},
+		vAxis: {title: 'Customers'},
+		legend: {position: 'bottom'},
+		fontName: "Adobe Clean",
+		fontSize: 16,
+		series: {
+			2: {
+				color: "#a9a9a9",
+				lineDashStyle: [4, 4]
+			}
+		}
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawH2GoalLiveChart() {
+	var goal = 190;
+	var ontrack = 59;
+	var customers = [];
+	var progress = 59;
+	var date = new Date();
+	date.setFullYear(2021);
+	date.setMonth(5);
+	date.setDate(6);
+	var checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+	var currDate = new Date();
+	var endDate = new Date();
+	endDate.setFullYear(2021);
+	endDate.setMonth(11);
+	endDate.setDate(6);
+	var endDate = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+	var i = 0;
+
+	// hide all dates for table calculation
+	$(".table tbody tr").hide();
+	var totalcustomers = parseInt(document.getElementById("total").innerHTML);
+
+	// loop dates from H2 2021 start until current date
+	do {
+		checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+		var checkDateStr = checkDate.getMonth()+1 + '/' + checkDate.getDate() + '/' + checkDate.getFullYear();
+
+		$(".table tbody td.livedate:contains('" + checkDateStr + "')").each(function() {
+			$(this).parent().show();
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			progress = totalcustomers - hidden + 59;
+		});
+
+		ontrack = i * (190-59) / (7*26) + 59;
+
+		if (checkDate <= currDate) {
+			customers.push([checkDate, progress, goal, ontrack]);
+		} else if (checkDate <= endDate) {
+			customers.push([checkDate, null, goal, ontrack]);
+		}
+		i++;
+	} while (checkDate <= endDate);
+
+	var data = new google.visualization.DataTable();
+	data.addColumn('date', '');
+	data.addColumn('number', 'Live');
+	data.addColumn('number', 'Goal');
+	data.addColumn('number', 'On Target');
+	data.addRows(customers);
+
+	var options = {
+		height: 400,
+		width: "100%",
+		hAxis: {title: ''},
+		vAxis: {title: 'Customers'},
+		legend: {position: 'bottom'},
+		fontName: "Adobe Clean",
+		fontSize: 16,
+		series: {
+			0: {
+				type: 'area',
+				color: '#33ff57',
+				areaOpacity: 0.6
+			},
+			2: {
+				color: "#a9a9a9",
+				lineDashStyle: [4, 4]
+			}
+		},
+		trendlines: { 0: {
+			type: 'linear',
+			visibleInLegend: true,
+			labelInLegend: 'Trend'}
+		},
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// Draw the chart and set the chart values
+function drawH122GoalLiveChart() {
+	var goal = 302;
+	var ontrack = 142;
+	var customers = [];
+	var progress = 142;
+	var date = new Date();
+	date.setFullYear(2021);
+	date.setMonth(11);
+	date.setDate(4);
+	var checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+	var currDate = new Date();
+	var endDate = new Date();
+	endDate.setFullYear(2022);
+	endDate.setMonth(5);
+	endDate.setDate(3);
+	var endDate = new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
+	var i = 0;
+
+	// hide all dates for table calculation
+	$(".table tbody tr").hide();
+	var totalcustomers = parseInt(document.getElementById("total").innerHTML);
+
+	// loop dates from H1 2022 start until current date
+	do {
+		checkDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() + i);
+		var checkDateStr = checkDate.getMonth()+1 + '/' + checkDate.getDate() + '/' + checkDate.getFullYear();
+
+		$(".table tbody td.livedate:contains('" + checkDateStr + "')").each(function() {
+			$(this).parent().show();
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			progress = totalcustomers - hidden + 142;
+		});
+
+		ontrack = i * (302-142) / (7*26) + 140;
+
+		if (checkDate <= currDate) {
+			customers.push([checkDate, progress, goal, ontrack]);
+		} else if (checkDate <= endDate) {
+			customers.push([checkDate, null, goal, ontrack]);
+		}
+		i++;
+	} while (checkDate <= endDate);
+
+	var data = new google.visualization.DataTable();
+	data.addColumn('date', '');
+	data.addColumn('number', 'Live');
+	data.addColumn('number', 'Goal');
+	data.addColumn('number', 'On Target');
+	data.addRows(customers);
+
+	var options = {
+		height: 400,
+		width: "100%",
+		hAxis: {title: ''},
+		vAxis: {title: 'Customers'},
+		legend: {position: 'bottom'},
+		fontName: "Adobe Clean",
+		fontSize: 16,
+		series: {
+			0: {
+				type: 'area',
+				color: '#33ff57',
+				areaOpacity: 0.6
+			},
+			2: {
+				color: "#a9a9a9",
+				lineDashStyle: [4, 4]
+			}
+		},
+		trendlines: { 0: {
+			type: 'linear',
+			visibleInLegend: true,
+			labelInLegend: 'Trend'}
+		},
+	};
+
+	var chart = new google.visualization.LineChart(document.getElementById('chart'));
+	chart.draw(data, options);
+}
+
+// draw data table
+function generateHtmlTable(rawData) {
+
+	// retrieve last updated date
+	var lastUpdated = rawData[rawData.length-2][0];
+	lastUpdated = lastUpdated.substring(lastUpdated.search(/\d/));
+	document.getElementById("lastUpdated").innerHTML = lastUpdated + " PST";
+
+	var data = processData(rawData);
+	var anyProblems = false;
+
+	var html = '<table class="table tablesorter" width="100%">';
+	html += '<thead>';
+	html += '<tr>';
+	html += "<th>Parent ID</th>";
+
+	var urlParams = new URLSearchParams(window.location.search);
+	if (urlParams.has("eccid") || urlParams.has("pageId")) {
+		html += "<th>ECC ID</th>";
+	}
+
+	html += "<th>Account</th>";
+
+	if (urlParams.has("contact") || urlParams.has("pageId")) {
+		html += "<th>Sales Contact</th>";
+		html += "<th>Customer Contact</th>";
+	}
+
+	if (urlParams.has("eccid") || urlParams.has("pageId")) {
+		html += "<th>AMS List</th>";
+	}
+
+ 	if (urlParams.has("salesplay") || urlParams.has("pageId")) {
+		html += "<th>Sales Play</th>";
+	}
+
+    html += "<th>From</th><th>Solutions</th><th>Selling Partner</th><th>Premier Support</th><th>Industry</th><th>Geo</th><th class='countryheader hide'>Country</th><th>Contract</th><th>Close Date</th><th>Quarter</th><th>Live Date</th><th>Service End Date</th><th>Deal Size</th>";
+	html += '</tr>';
+	html += '</thead>';
+	html += '<tbody>';
+
+	for (i=0;i<data.length;i++) {
+		if (data[i].customer.live) {
+			html += "<tr class=live>";
+		} else {
+			if (!data[i].customer.hasSites && !data[i].customer.hasAssets && !data[i].customer.hasForms && !data[i].customer.hasScreens && !data[i].customer.hasCIF && !data[i].customer.hasXML && !data[i].customer.hasEssentials && !data[i].customer.hasContentAutomation) {
+				html += "<tr class=problems>";
+				anyProblems = true;
+			} else {
+				html += "<tr>";
+			}
+		}
+		html += "<td>" + data[i].customer.spid + "</td>";
+
+		if (urlParams.has("eccid") || urlParams.has("pageId")) {
+			html += "<td>" + data[i].customer.eccid + "</td>";
+		}
+
+		html += "<td class=account>" + data[i].customer.account + "</td>";
+
+		if (urlParams.has("contact") || urlParams.has("pageId")) {
+			html += "<td class=contact>" + data[i].customer.contact + "</td>";
+			html += "<td class=customercontact>" + data[i].customer.customercontact + "</td>";
+		}
+
+		if (urlParams.has("eccid") || urlParams.has("pageId")) {
+			html += "<td class=amslist>" + data[i].customer.amslist + "</td>";
+		}
+
+ 		if (urlParams.has("salesplay") || urlParams.has("pageId")) {
+			html += "<td class=salesplay>" + data[i].customer.salesPlay + "</td>";
+		}
+
+	    html += "<td class=custtype>" + data[i].customer.custtype + "</td>";
+		html += "<td class=solutions>";
+		if (data[i].customer.hasSites) {
+			html += "Sites ";
+		}
+		if (data[i].customer.hasAssets) {
+			html += "Assets ";
+		}
+		if (data[i].customer.hasForms) {
+			html += "Forms ";
+		}
+		if (data[i].customer.hasScreens) {
+			html += "Screens ";
+		}
+		if (data[i].customer.hasCIF) {
+			html += "CIF ";
+		}
+		if (data[i].customer.hasXML) {
+			html += "XML ";
+		}
+		if (data[i].customer.hasEssentials) {
+			html += "Essentials ";
+		}
+		if (data[i].customer.hasContentAutomation) {
+			html += "ContentAutomation ";
+		}
+		html += "</td>";
+		html += "<td class=sellingpartner>" + data[i].customer.sellingPartner + "</td>";
+		html += "<td class=ps>" + data[i].customer.premierSupport + "</td>";
+		html += "<td class=industry>" + data[i].customer.industry + "</td>";
+		html += "<td class=geo>" + data[i].customer.geo + "</td>";
+		html += "<td class='country hide'>" + data[i].customer.country + "</td>";
+		html += "<td>" + data[i].customer.contracts + "</td>";
+		html += "<td class=closedate>" + data[i].customer.closeDate + "</td>";	
+		html += "<td class=quarter nowrap>" + data[i].customer.quarter + "</td>";
+		html += "<td class=livedate nowrap>" + data[i].customer.livedate + "</td>";
+		html += "<td class=enddate nowrap>" + data[i].customer.enddate + "</td>";
+		html += "<td class=dealsize>";
+
+		if (data[i].customer.dealsize <= 100000) {
+			html += "S";
+		} else if (data[i].customer.dealsize <= 250000) {
+			html += "M";
+		} else if (data[i].customer.dealsize <= 1000000) {
+			html += "L";
+		} else {
+			html += "ExL";
+		}
+
+		html += "</td>";
+		html += "</tr>";
+	}
+
+	html += '</tbody>';
+	html += '</table>';
+		
+	$('#csv-display').html(html);
+
+	$(".tablesorter").tablesorter();
+
+	// only show the Uncategorized button if there are any uncategorized customers
+	if ($(".table tbody td.custtype:contains('tbd')").length==0) {
+		$("#btnTBD").css("display","none");
+	}
+
+	// only show the Problems button if there are any contractually problematic customers
+	if (!anyProblems) {
+		$("#btnProblems").css("display","none");
+	}
+
+}
+
+// process raw data for table-friendly format
+function processData(rawData) {
+	var data = new Array();
+
+	for (i=1; i<rawData.length; i++) {
+		var dr = rawData[i][0];
+		var oppId = rawData[i][1];
+		var account = rawData[i][2];
+		var eccid = rawData[i][3];
+		var spid = rawData[i][4];
+		var quarter = rawData[i][5];
+		var closeDate = rawData[i][6];
+		var sellingPartner = rawData[i][7];
+		var geo = rawData[i][8];
+		var sku = rawData[i][9];
+		var industry = rawData[i][10];
+		var country = rawData[i][11];
+		var prodAccountId = rawData[i][12];
+		var total = rawData[i][14];
+		var endDate = rawData[i][15];
+		var recordOwner = rawData[i][16];
+		var recordOwnerEmail = rawData[i][17];
+		var partnerSalesMgr = rawData[i][18];
+		var createdBy = rawData[i][19];
+		var customerContact = rawData[i][20];
+		var customerContactEmail = rawData[i][21];
+		var primarySalesPlay = rawData[i][22];
+		if (primarySalesPlay=="No Applicable Sales Play") {primarySalesPlay = "";}
+		var secondarySalesPlay = rawData[i][23];
+		if (secondarySalesPlay=="No Applicable Sales Play") {secondarySalesPlay = "";}
+
+		//var total = 0;
+		var dealsize = Math.round(parseFloat(total));
+		var live = false;
+		var golivedate = "";
+		var pslevel = "";
+		var amslist = "";
+		var contact = "";
+		var customercontact = "";
+
+		// check for matching account id in ps list
+		if (prodAccountId!=null && livedata!=null) {
+			for (j=0;j<livedata.length;j++) {
+				//var status = livedata[j][1];
+				var livedataaccountid = livedata[j][3];
+				var ps = livedata[j][4];
+				if (livedataaccountid==prodAccountId) {
+					pslevel = getPremierSupportSNOW(ps);
+					//if (status=="Production") {
+						//live = true;
+					//}
+					break;
+				}
+			}
+		}
+		// check for matching account id in live list
+		if (prodAccountId!=null && live2data!=null) {
+			for (j=0;j<live2data.length;j++) {
+				var livedatestr = live2data[j][6];
+ 				var livedate = parseInt(livedatestr.split("-")[1]) + "/" + parseInt(livedatestr.split("-")[2]) + "/" + livedatestr.split("-")[0]; 
+				//var livedate = parseInt(livedatestr.split("/")[0]) + "/" + parseInt(livedatestr.split("/")[1]) + "/20" + livedatestr.split("/")[2];
+				var livedataaccountid = live2data[j][11];
+				//var ps = live2data[j][9];
+				if (livedataaccountid==prodAccountId) {
+					//pslevel = getPremierSupportSNOW(ps);
+					//if (status=="Production") {
+						live = true;
+					//}
+					if (livedatestr!="") {
+						golivedate = livedate;
+					}
+					break;
+				}
+			}
+		}
+
+		// ignore metadata at end of list
+		if (spid!=null) {
+			// check to see if customer has already been processed
+			var processed = false;
+			for (j=0; j<data.length; j++) {
+				if (data[j].customer.spid == spid) {
+					processed = true;
+
+					// check live
+					if (!data[j].customer.live) {
+						data[j].customer.live = live;
+					}
+					// check live date
+					if (data[j].customer.livedate=="") {
+						data[j].customer.livedate = golivedate;
+					} else {
+						if (golivedate!="") {
+							if (Date.parse(data[j].customer.livedate) > Date.parse(golivedate)) {
+								data[j].customer.livedate = golivedate;
+							}
+						}
+					}
+
+					if (Date.parse(data[j].customer.enddate) < Date.parse(endDate)) {
+						data[j].customer.enddate = endDate;
+					}
+
+					// add solution
+					switch(getSolution(sku)) {
+						case "Sites":
+							data[j].customer.hasSites = true;
+							dealsize = dealsize * 12;
+							break;
+						case "Assets":
+							data[j].customer.hasAssets = true;
+							break;
+						case "Forms":
+							data[j].customer.hasForms = true;
+							break;
+						case "Screens":
+							data[j].customer.hasScreens = true;
+							break;
+						case "CIF":
+							data[j].customer.hasCIF = true;
+							dealsize = dealsize * 12;
+							break;
+						case "XML":
+							data[j].customer.hasXML = true;
+							break;
+						case "Essentials":
+							data[j].customer.hasEssentials = true;
+							break;
+ 						case "ContentAutomation":
+							data[j].customer.hasContentAutomation = true;
+							break; 
+			        };
+					if (!data[j].customer.solutions.includes(solution)) {
+						data[j].customer.solutions += " " + solution;
+					}
+
+					if (!data[j].customer.eccid.includes(eccid)) {
+						data[j].customer.eccid += " " + eccid;
+
+						// check if customer is on AMS list
+						if (amsloaded && data[j].customer.amslist=="") {
+							for (r=0; r<amsdata.length; r++) {
+								if (eccid==amsdata[r][1]) {
+									amslist = "ams";
+									data[j].customer.amslist = amslist;
+									break;
+								}
+							}
+						}
+					}
+
+					if (!data[j].customer.prodAccountId.includes(prodAccountId)) {
+						data[j].customer.prodAccountId += " " + prodAccountId;
+					}
+
+					if (!data[j].customer.account.includes(account)) {
+						data[j].customer.account += "<br>" + account;
+					}
+
+					if (!data[j].customer.sellingPartner.includes(sellingPartner)) {
+						if (data[j].customer.sellingPartner!="" && sellingPartner!="") {
+							data[j].customer.sellingPartner += "<br>";
+						}
+						data[j].customer.sellingPartner += sellingPartner;
+					}
+
+					if (!data[j].customer.contracts.includes(dr)) {
+						var oppLink = "<a target=_blank href='https://adobe.my.salesforce.com/" + oppId + "'>" + dr + "</a>";
+						data[j].customer.contracts += "<br>" + oppLink;
+					}
+
+					if (!data[j].customer.closeDate.includes(closeDate)) {
+						data[j].customer.closeDate += " <br>" + closeDate;
+					}
+
+					if (!data[j].customer.geo.includes(geo)) {
+						data[j].customer.geo += "<br>" + geo;
+					}
+
+					if (!data[j].customer.country.includes(country)) {
+						data[j].customer.country += " " + country;
+					}
+
+					if (!data[j].customer.industry.includes(industry)) {
+						data[j].customer.industry += "<br>" + industry;
+					}
+
+					if (!data[j].customer.quarter.includes(quarter)) {
+						data[j].customer.quarter += "<br>" + quarter;
+					}
+
+					if (data[j].customer.premierSupport=="") {
+						data[j].customer.premierSupport = pslevel;
+					}
+
+					data[j].customer.dealsize = data[j].customer.dealsize + dealsize;
+
+					if (!data[j].customer.contact.includes(recordOwner)) {
+						data[j].customer.contact += "<a href='mailto:" + recordOwnerEmail + "'>" + recordOwner + "</a><br>";
+					}					
+					if (!data[j].customer.contact.includes(partnerSalesMgr) && partnerSalesMgr!="") {
+						data[j].customer.contact += partnerSalesMgr + "<br>";
+					}
+					if (!data[j].customer.contact.includes(createdBy)) {
+						data[j].customer.contact += createdBy + "<br>";
+					}
+
+					if (!data[j].customer.customercontact.includes(customerContact)) {
+						data[j].customer.customercontact += "<a href='mailto:" + customerContactEmail + "'>" + customerContact + "</a><br>";
+					}
+
+ 					if (!data[j].customer.salesPlay.includes(primarySalesPlay)) {
+						if (data[j].customer.salesPlay!="" && primarySalesPlay!="") {
+							data[j].customer.salesPlay += "<br>";
+						}
+						data[j].customer.salesPlay += primarySalesPlay;
+					}
+  					if (!data[j].customer.salesPlay.includes(secondarySalesPlay)) {
+						if (data[j].customer.salesPlay!="" && secondarySalesPlay!="") {
+							data[j].customer.salesPlay += "<br>";
+						}
+						data[j].customer.salesPlay += secondarySalesPlay;
+					}
+
+			        break;
+				}
+			}
+
+			if (!processed) {
+				// add customer
+				var oppLink = "<a target=_blank href='https://adobe.my.salesforce.com/" + oppId + "'>" + dr + "</a>";
+				var custtype = getCustomerType(spid);
+				
+				// solution requires extra translation
+				var hasSites = false;
+				var hasAssets = false;
+				var hasForms = false;
+				var hasScreens = false;
+				var hasCIF = false;
+				var hasXML = false;
+				var hasEssentials = false;
+				var hasContentAutomation = false;
+				var solution = "";
+				switch(getSolution(sku)) {
+					case "Sites":
+						hasSites = true;
+						dealsize = dealsize * 12;
+						break;
+					case "Assets":
+						hasAssets = true;
+						break;
+					case "Forms":
+						hasForms = true;
+						break;
+					case "Screens":
+						hasScreens = true;
+						break;
+					case "CIF":
+						hasCIF = true;
+						dealsize = dealsize * 12;
+						break;
+					case "XML":
+						hasXML = true;
+						break;
+					case "Essentials":
+						hasEssentials = true;
+						break;
+ 					case "ContentAutomation":
+						hasContentAutomation = true;
+						break; 
+		     	};
+				
+				// old way with separate salesforce report, no longer needed now that ps is in SNOW report
+				// var premierSupport = getPremierSupport(spid);
+
+				// check if customer is on AMS list
+				if (amsloaded) {
+					for (r=0; r<amsdata.length; r++) {
+						if (eccid==amsdata[r][1]) {
+							amslist = "ams";
+							break;
+						}
+					}
+				}
+
+				contact = "<a href='mailto:" + recordOwnerEmail + "'>" + recordOwner + "</a><br>";
+				if (!contact.includes(partnerSalesMgr) && partnerSalesMgr!="") {
+					contact += partnerSalesMgr + "<br>";
+				}
+				if (!contact.includes(createdBy)) {
+					contact += createdBy + "<br>";
+				}
+
+				if (customerContact!="") {
+					customercontact = "<a href='mailto:" + customerContactEmail + "'>" + customerContact + "</a><br>";
+				}
+
+				var salesPlay = primarySalesPlay;
+				if (salesPlay!="" && secondarySalesPlay!="") {
+					salesPlay += "<br>";
+				}
+				salesPlay += secondarySalesPlay;
+
+				data.push({
+					"customer":{
+						"spid":spid,
+						"eccid":eccid,
+						"account":account,
+						"contracts":oppLink,
+						"custtype":custtype,
+						"hasSites":hasSites,
+						"hasAssets":hasAssets,
+						"hasForms":hasForms,
+						"hasScreens":hasScreens,
+						"hasCIF":hasCIF,
+						"hasXML":hasXML,
+						"hasEssentials":hasEssentials,
+ 					    "hasContentAutomation":hasContentAutomation,
+				        "solutions":solution,
+						"sellingPartner":sellingPartner,
+						"premierSupport":pslevel,
+						"closeDate":closeDate,
+						"quarter":quarter,
+						"geo":geo,
+						"industry":industry,
+						"country":country,
+						"prodAccountId":prodAccountId,
+						"dealsize":dealsize,
+						"live":live,
+						"livedate":golivedate,
+						"enddate":endDate,
+						"amslist":amslist,
+						"contact":contact,
+						"customercontact":customercontact,
+						"salesPlay":salesPlay
+					}
+				});
+			}
+
+		}
+
+	}
+
+	// default to showing all, count above table
+	document.getElementById("shown").innerHTML = data.length;
+	document.getElementById("total").innerHTML = data.length;
+
+	return data;
+}
+
+function getSolution(sku) {
+	var solution = "";
+	switch (sku) {
+		case "38056474":
+		case "38056475":
+		case "38057960":
+			solution = "Sites";
+			break;
+		case "38056481":
+		case "38058356":
+			solution = "Assets";
+			break;
+		case "38057998":
+		case "38058371":
+			solution = "Forms";
+			break;
+		case "38058154":
+		case "38058155":
+		case "38058156":
+		case "38058254":
+			solution = "Screens";
+			break;
+		case "38057514":
+		case "38058165":
+		case "38058166":
+		case "38057961":
+			solution = "CIF";
+			break;
+		case "38058152":
+		case "38058153":
+			solution = "XML";
+			break;
+		case "38058250":
+			solution = "Essentials";
+			break;
+ 		case "38058355":
+  		case "38058356": 
+  		case "38058380": 
+			solution = "ContentAutomation";
+			break; 
+	} 
+	return solution;
+}
+
+function getPremierSupportSNOW(fullname) {
+	var premierSupport = fullname;
+
+	switch (fullname) {
+		case "Enterprise 1":
+		case "Enterprise 2":
+		case "Enterprise 3":
+			premierSupport = "Enterprise";
+			break;
+		case "Elite 1":
+		case "Elite 2":
+		case "Elite 3":
+		case "Elite 4":
+			premierSupport = "Elite";
+			break;
+		case "Elite Plus":
+			premierSupport = "Elite Plus";
+			break;
+		case "No Premier Level":
+		case "Business 1":
+		case "Business 2":
+		case "Business 3":
+			premierSupport = "";
+			break;
+	}
+	return premierSupport;
+}
+
+// this function is no longer used now that PS level is given from SNOW rather than calculated from Salesforce SKU
+function getPremierSupport(spid) {
+	var premierSupport = "";
+	var sku = "";
+
+	// this could be refactored to be more accurate
+	// currently first match on standardized parent id
+	// better but slower might be highest match on ecc id
+	// impact is this table may misrepresent PS level for complex accounts
+	if (psdata!=null) {
+		for (n=0;n<psdata.length;n++) {
+			var psspid = psdata[n][2];
+			var pssku = psdata[n][4];
+			if (spid==psspid) {
+				sku = pssku;
+				break;
+			}
+		}
+	}
+
+	switch (sku) {
+		case "38056849":
+		case "38056850":
+		case "38056851":
+		case "38056860":
+		case "38056861":
+		case "38056862":
+			premierSupport = "Enterprise";
+			break;
+		case "38056852":
+		case "38056853":
+		case "38056854":
+		case "38056855":
+		case "38056863":
+		case "38056864":
+		case "38056865":
+		case "38056867":
+		case "38057953":
+		case "38057954":
+			premierSupport = "Elite";
+			break;
+		case "38056856":
+		case "38057955":
+		case "38057956":
+			premierSupport = "Elite Plus";
+			break;
+	}
+	return premierSupport;
+}
+
+// determine customer type which is not included in the Salesforce report used by this page
+function getCustomerType(spid) {
+	// customers with a default value of tbd need to be manually added
+	// to the customerTypes array at the top of the page
+	var customerType = "tbd";
+	for (m=0;m<customerTypes.length; m++) {
+		if (customerTypes[m].customer.spid == spid) {
+			customerType = customerTypes[m].customer.custtype;
+			break;
+		}
+	}
+	return customerType;
+}
+
+function openTab(evt, tabContent) {
+	// Declare all variables
+	var i, tabcontent, tablinks;
+
+	// Get all elements with class="tabcontent" and hide them
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+
+	// Get all elements with class="tablinks" and remove the class "active"
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+
+	// click default button depending on tab
+	if (tabContent=="tabData") {
+		document.getElementById("filterall").click();
+	} else if (tabContent=="tabCharts") {
+		document.getElementById("chartfrom").click();
+	}
+
+	// Show the current tab, and add an "active" class to the button that opened the tab
+	document.getElementById(tabContent).style.display = "block";
+	evt.currentTarget.className += " active";
+}
+
+function changeChart(btn, chart) {
+	$("button.chart").removeClass("on");
+	$(btn).addClass("on");
+
+	switch (chart) {
+		case "from":
+			// load live data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+
+			// draw from chart
+			drawFromChart();
+			$("#person").attr("src", imgFolder + "cedric.jpg");
+			$("#message").html("Customers have taken different journeys to arrive at Cloud Service!");
+			$(".chartheader").html("");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "fromhistory":
+			// draw from history chart
+			drawFromHistoryChart();
+			$("#person").attr("src", imgFolder + "anthony.jpg");
+			$("#message").html("There was an increase in customers coming from AMS over the past year.");
+			$(".chartheader").html("");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "live":
+			// load live data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+			// draw live chart
+			drawLiveChart();
+			$("#person").attr("src", imgFolder + "bertrand.jpg");
+			$("#message").html("Live customers are always on, always up-to-date!");	
+			$(".chartheader").html("AMS customers marked live on this chart may not have fully migrated from AMS.");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "geo":
+			// draw geo chart
+			drawGeoChart();
+			$("#person").attr("src", imgFolder + "bertrand.jpg");
+			$("#message").html("Cloud Service is used around the globe!");
+			$(".chartheader").html("Click to drilldown and right-click to move back up to the global view.");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "solution":
+			// draw solution chart
+			drawSolutionChart();
+			$("#person").attr("src", imgFolder + "ian.jpg");
+			$("#message").html("Cloud Service runs a variety of solutions and use cases!");
+			$(".chartheader").html("");
+			$("#chart").addClass("hide");
+			$("#venn svg").removeClass("hide");
+			break;
+		case "partner":
+			// draw partner chart
+			drawPartnerChart();
+			$("#person").attr("src", imgFolder + "brwarner.jpg");
+			$("#message").html("Ahoy!  Many partners sell Cloud Service!");
+			$(".chartheader").html("Click to drilldown and right-click to move back up to the global view.  Selling partner is not necessarily implementation partner.  No data currently showing where ACS is the implementation partner.  Deals closed without a selling partner are not represented here.  Color scale represents number of customers sold by a given single partner, not parent company.");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "ps":
+			// draw premier support chart
+			drawPSChart();
+			$("#person").attr("src", imgFolder + "adam.jpg");
+			$("#message").html("Most Cloud Service customers purchase Premier Support!");
+			$(".chartheader").html("Premier Support status may not be 100% accurate.");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "history":
+			// draw license history chart
+			drawLicenseHistoryChart();
+			$("#person").attr("src", imgFolder + "stefan.jpg");
+			$("#message").html("End of quarter always brings a nice spych... I mean spike in licenses.");
+			$(".chartheader").html("");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "livehistory":
+			// draw live history chart
+			drawLiveHistoryChart();
+			$("#person").attr("src", imgFolder + "julia.jpg");
+			$("#message").html("Premier Support helps customers go live more quickly!");
+			$(".chartheader").html("");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "assetslivehistory":
+			// draw live history chart
+			drawAssetsLiveHistoryChart();
+			$("#person").attr("src", imgFolder + "chandar.jpg");
+			$("#message").html("Here is the progression of licensed and live for Assets customers!");
+			$(".chartheader").html("");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "contracttolive":
+			// draw live history chart
+			drawContractToLiveChart();
+			$("#person").attr("src", imgFolder + "jc.jpg");
+			$("#message").html("See more implementation metrics at <a href='https://dashdiscovery.corp.adobe.com/#/views/AEMCustomerJourney/AEMCustomerJourney'>Customer Journey Dashboard</a>!");
+			$(".chartheader").html("");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "h1goal":
+			// draw h1 goal chart
+			drawH1GoalChart();
+			$(".table tbody tr").hide();			
+			$(".table tbody td.quarter:contains('2021 - Q1')").parent().show();
+			$(".table tbody td.quarter:contains('2021 - Q2')").parent().show();
+			$(".table tbody td.custtype:contains('ams')").parent().hide();
+			$("#person").attr("src", imgFolder + "frank.jpg");
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#message").html(shown + " customers from on-prem or new to AEM as a Cloud Service licensed in H1.");
+			$(".chartheader").html("2021 H1 goal was 134 customers from on-prem or new to AEM.  This chart includes customers who licensed prior to 2021 H1 and then again during 2021 H1.  Click the Data tab, 2021 - H1 button for a complete list (including customers from AMS).");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "h2goal":
+			// draw h2 goal chart
+			drawH2GoalChart();
+			$(".table tbody tr").hide();
+			$(".table tbody td.quarter:contains('2021 - Q3')").parent().show();			
+			$(".table tbody td.quarter:contains('2021 - Q4')").parent().show();
+			$(".table tbody td.quarter:contains('2020 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q2')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q3')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q4')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q2')").parent().hide();
+			$("#person").attr("src", imgFolder + "frank.jpg");
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#message").html(shown + " AEM as a Cloud Service customers so far in H2.");
+			$(".chartheader").html("2021 H2 goal is 290 from on-prem, AMS, or new to AEM, excluding customers who first licensed prior to 2021 H2.  To see a full list, click the Data tab, New This Half button.");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+		case "h2goallive":
+			// draw h2 goal chart
+			drawH2GoalLiveChart();
+			$(".table tbody tr").hide();
+			$(".table tbody tr[class*='live']").show();
+			$("#person").attr("src", imgFolder + "frank.jpg");
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#message").html(shown + " live, " + (190-shown) + " to go!");
+			$(".chartheader").html("Click the Data tab, &lt; H2 2021 Not Live button to see customers under review.");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;
+ 		case "h122goallive":
+			// draw h1 goal chart
+			drawH122GoalLiveChart();
+			$(".table tbody tr").hide();
+			$(".table tbody tr[class*='live']").show();
+			$("#person").attr("src", imgFolder + "tracy.jpg");
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#message").html("Our goal is to have 160 additional customers go live in H1!");
+			$(".chartheader").html("");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+			break;    default:
+			$('#chart').html("");
+			$("#chart").removeClass("hide");
+			$("#venn svg").addClass("hide");
+	}
+	
+}
+function changeFilter(btn, filter) {
+	$("button.filter").removeClass("on");
+	$(btn).addClass("on");
+
+	switch (filter) {
+		case "all":
+			$(".table tbody tr").show();
+			$("#person").attr("src", imgFolder + "gillian.jpg");
+			$("#message").html("Welcome to the Customer Lookup App for AEM as a Cloud Service!");
+//			$("#person").attr("src", imgFolder + "jc.jpg");
+//			$("#message").html("Welcome to the Customer Lookup App for AEM as a Cloud Service!<br>Please visit <a href='https://dashdiscovery.corp.adobe.com/#/views/AEMCustomerJourney/AEMCustomerJourney?:iid=1'>Customer Journey Dashboard</a> for more insights!");
+			break;
+		case "sites":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.solutions:contains('Sites')").parent().show();
+			$("#person").attr("src", imgFolder + "haresh.jpg");
+			$("#message").html("Sites is booming at the speed of the cloud!");	
+			break;
+		case "assets":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.solutions:contains('Assets')").parent().show();
+			$("#person").attr("src", imgFolder + "elliot.jpg");
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#message").html(shown + " Assets customers on AEM as a Cloud Service!");	
+			break;			
+		case "assetsnosites":
+			$(".table tbody tr").hide();
+			$(".table tbody tr").show();			
+			$(".table tbody td.solutions:not(:contains('Assets'))").parent().hide();
+			$(".table tbody td.solutions:contains('Sites')").parent().hide();
+			$("#person").attr("src", imgFolder + "philipp.jpg");
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#message").html(shown + " Assets-only customers on AEM as a Cloud Service!");	
+			break;
+		case "assetsessentials":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.solutions:contains('Essentials')").parent().show();
+			$("#person").attr("src", imgFolder + "vesna.jpg");
+			$("#message").html("Assets Essentials is now available!");	
+			break;	
+ 		case "assetscontentautomation":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.solutions:contains('ContentAutomation')").parent().show();
+			$("#person").attr("src", imgFolder + "thiers.jpg");
+			$("#message").html("Customers are super-charging their content velocity with Content Automation!");	
+			break;	 
+	    case "forms":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.solutions:contains('Forms')").parent().show();
+			$("#person").attr("src", imgFolder + "arun.jpg");
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#message").html(shown + " Forms customers on AEM as a Cloud Service!");
+			break;
+		case "cif":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.solutions:contains('CIF')").parent().show();
+			$("#person").attr("src", imgFolder + "martin.jpg");
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#message").html(shown + " CIF customers on AEM as a Cloud Service!");
+			break;
+		case "screens":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.solutions:contains('Screens')").parent().show();
+			$("#person").attr("src", imgFolder + "mihai.jpg");
+			//var total = parseInt(document.getElementById("total").innerHTML);
+			//var hidden = $('.table tbody tr[style*="display: none"]').length;
+			//var shown = total - hidden;
+			//$("#message").html(shown + " Screens customers on AEM as a Cloud Service!");
+			$("#message").html("Screens on Cloud Service is now GA!");
+			break;
+		case "nops":
+			// load premier support data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();
+			$(".table tbody td.ps:not(:contains('E'))").parent().show();
+			$("#person").attr("src", imgFolder + "gillian.jpg");
+			$("#message").html("These customers may need extra support.");	
+			break;
+		case "onp":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.custtype:contains('onp')").parent().show();
+			$("#person").attr("src", imgFolder + "darren.jpg");
+			$("#message").html("These customers had AEM on-premise and are migrating to Cloud Service.");			
+			break;
+		case "ams":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.custtype:contains('ams')").parent().show();
+			$("#person").attr("src", imgFolder + "mitch.jpg");
+			$("#message").html("These customers had AEM on Managed Services and are migrating to Cloud Service.");	
+			break;
+		case "new":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.custtype:contains('new')").parent().show();
+			$("#person").attr("src", imgFolder + "gagan.jpg");
+			$("#message").html("These customers did not have AEM before licensing Cloud Service.");	
+			break;
+		case "tbd":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.custtype:contains('tbd')").parent().show();
+			$("#person").attr("src", imgFolder + "damian.jpg");
+			$("#message").html("These customers need to be identified as coming from on-premise, AMS, or new.");
+			break;
+		case "live":
+			// load live data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();
+			$(".table tbody tr[class*='live']").show();
+			$("#person").attr("src", imgFolder + "alex.jpg");
+			$("#message").html("These customers are live on Cloud Service!");
+			break;
+		case "livesites":
+			// load live data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();
+			$(".table tbody tr[class*='live']").show();
+			$(".table tbody td.solutions:not(:contains('Sites'))").parent().hide();
+			$("#person").attr("src", imgFolder + "marth.jpg");
+			$("#message").html("These Sites customers are live on Cloud Service!");
+			break;
+		case "liveassets":
+			// load live data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();
+			$(".table tbody tr[class*='live']").show();
+			$(".table tbody td.solutions:not(:contains('Assets'))").parent().hide();
+			$("#person").attr("src", imgFolder + "kaushal.jpg");
+			$("#message").html("These Assets customers are live on Cloud Service!");
+			break;
+		case "livecif":
+			// load live data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();
+			$(".table tbody tr[class*='live']").show();
+			$(".table tbody td.solutions:not(:contains('CIF'))").parent().hide();
+			$("#person").attr("src", imgFolder + "martin.jpg");
+			$("#message").html("These CIF customers are live on Cloud Service!");
+			break;
+		case "livethisweek":
+			// load live data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();
+			var curr = new Date();
+			var day1 = new Date(curr.setDate(curr.getDate() - curr.getDay()));
+			var day2 = new Date(curr.setDate(curr.getDate() - curr.getDay()+1));
+			var day3 = new Date(curr.setDate(curr.getDate() - curr.getDay()+2));
+			var day4 = new Date(curr.setDate(curr.getDate() - curr.getDay()+3));
+			var day5 = new Date(curr.setDate(curr.getDate() - curr.getDay()+4));
+			var day6 = new Date(curr.setDate(curr.getDate() - curr.getDay()+5));
+			var day7 = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
+			day1 = (day1.getMonth()+1) + "/" + day1.getDate() + "/" + day1.getFullYear();
+			day2 = (day2.getMonth()+1) + "/" + day2.getDate() + "/" + day2.getFullYear();
+			day3 = (day3.getMonth()+1) + "/" + day3.getDate() + "/" + day3.getFullYear();
+			day4 = (day4.getMonth()+1) + "/" + day4.getDate() + "/" + day4.getFullYear();
+			day5 = (day5.getMonth()+1) + "/" + day5.getDate() + "/" + day5.getFullYear();
+			day6 = (day6.getMonth()+1) + "/" + day6.getDate() + "/" + day6.getFullYear();
+			day7 = (day7.getMonth()+1) + "/" + day7.getDate() + "/" + day7.getFullYear();
+			$(".table tbody td.livedate:contains('" + day1 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day2 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day3 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day4 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day5 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day6 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day7 + "')").parent().show();
+			$("#person").attr("src", imgFolder + "tracy.jpg");
+			$("#message").html("This week's list may not be current.  The last update is mentioned below.");	
+			break;
+		case "livelastweek":
+			// load live data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();			
+			var curr = new Date();
+			var day1 = new Date(curr.setDate(curr.getDate() - curr.getDay()-7));
+			var day2 = new Date(curr.setDate(curr.getDate() - curr.getDay()+1));
+			var day3 = new Date(curr.setDate(curr.getDate() - curr.getDay()+2));
+			var day4 = new Date(curr.setDate(curr.getDate() - curr.getDay()+3));
+			var day5 = new Date(curr.setDate(curr.getDate() - curr.getDay()+4));
+			var day6 = new Date(curr.setDate(curr.getDate() - curr.getDay()+5));
+			var day7 = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
+			day1 = (day1.getMonth()+1) + "/" + day1.getDate() + "/" + day1.getFullYear();
+			day2 = (day2.getMonth()+1) + "/" + day2.getDate() + "/" + day2.getFullYear();
+			day3 = (day3.getMonth()+1) + "/" + day3.getDate() + "/" + day3.getFullYear();
+			day4 = (day4.getMonth()+1) + "/" + day4.getDate() + "/" + day4.getFullYear();
+			day5 = (day5.getMonth()+1) + "/" + day5.getDate() + "/" + day5.getFullYear();
+			day6 = (day6.getMonth()+1) + "/" + day6.getDate() + "/" + day6.getFullYear();
+			day7 = (day7.getMonth()+1) + "/" + day7.getDate() + "/" + day7.getFullYear();
+			$(".table tbody td.livedate:contains('" + day1 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day2 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day3 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day4 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day5 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day6 + "')").parent().show();
+			$(".table tbody td.livedate:contains('" + day7 + "')").parent().show();
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#person").attr("src", imgFolder + "tracy.jpg");
+			if (shown==0) {
+				$("#message").html("No new go-lives last week for AEM as a Cloud Service.");
+			} else if (shown==1) {
+				$("#message").html(shown + " go-live last week for AEM as a Cloud Service!");
+			} else {
+				$("#message").html(shown + " go-lives last week for AEM as a Cloud Service!");
+			}
+			break;
+		case "thisweek":
+			$(".table tbody tr").hide();
+			var curr = new Date();
+			var day1 = new Date(curr.setDate(curr.getDate() - curr.getDay()));
+			var day2 = new Date(curr.setDate(curr.getDate() - curr.getDay()+1));
+			var day3 = new Date(curr.setDate(curr.getDate() - curr.getDay()+2));
+			var day4 = new Date(curr.setDate(curr.getDate() - curr.getDay()+3));
+			var day5 = new Date(curr.setDate(curr.getDate() - curr.getDay()+4));
+			var day6 = new Date(curr.setDate(curr.getDate() - curr.getDay()+5));
+			var day7 = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
+			day1 = (day1.getMonth()+1) + "/" + day1.getDate() + "/" + day1.getFullYear();
+			day2 = (day2.getMonth()+1) + "/" + day2.getDate() + "/" + day2.getFullYear();
+			day3 = (day3.getMonth()+1) + "/" + day3.getDate() + "/" + day3.getFullYear();
+			day4 = (day4.getMonth()+1) + "/" + day4.getDate() + "/" + day4.getFullYear();
+			day5 = (day5.getMonth()+1) + "/" + day5.getDate() + "/" + day5.getFullYear();
+			day6 = (day6.getMonth()+1) + "/" + day6.getDate() + "/" + day6.getFullYear();
+			day7 = (day7.getMonth()+1) + "/" + day7.getDate() + "/" + day7.getFullYear();
+			$(".table tbody td.closedate:contains('" + day1 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day2 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day3 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day4 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day5 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day6 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day7 + "')").parent().show();
+			$("#person").attr("src", imgFolder + "damian.jpg");
+			$("#message").html("This week's list may not be current.  The last update is mentioned below.");	
+			break;
+		case "lastweek":
+			$(".table tbody tr").hide();			
+			var curr = new Date();
+			var day1 = new Date(curr.setDate(curr.getDate() - curr.getDay()-7));
+			var day2 = new Date(curr.setDate(curr.getDate() - curr.getDay()+1));
+			var day3 = new Date(curr.setDate(curr.getDate() - curr.getDay()+2));
+			var day4 = new Date(curr.setDate(curr.getDate() - curr.getDay()+3));
+			var day5 = new Date(curr.setDate(curr.getDate() - curr.getDay()+4));
+			var day6 = new Date(curr.setDate(curr.getDate() - curr.getDay()+5));
+			var day7 = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
+			day1 = (day1.getMonth()+1) + "/" + day1.getDate() + "/" + day1.getFullYear();
+			day2 = (day2.getMonth()+1) + "/" + day2.getDate() + "/" + day2.getFullYear();
+			day3 = (day3.getMonth()+1) + "/" + day3.getDate() + "/" + day3.getFullYear();
+			day4 = (day4.getMonth()+1) + "/" + day4.getDate() + "/" + day4.getFullYear();
+			day5 = (day5.getMonth()+1) + "/" + day5.getDate() + "/" + day5.getFullYear();
+			day6 = (day6.getMonth()+1) + "/" + day6.getDate() + "/" + day6.getFullYear();
+			day7 = (day7.getMonth()+1) + "/" + day7.getDate() + "/" + day7.getFullYear();
+			$(".table tbody td.closedate:contains('" + day1 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day2 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day3 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day4 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day5 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day6 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day7 + "')").parent().show();
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#person").attr("src", imgFolder + "tracy.jpg");
+			if (shown==0) {
+				$("#message").html("No new contracts last week for AEM as a Cloud Service.");
+			} else if (shown==1) {
+				$("#message").html(shown + " contract last week for AEM as a Cloud Service!");
+			} else {
+				$("#message").html(shown + " contracts last week for AEM as a Cloud Service!");
+			}
+			break;
+		case "lastweeksites":
+			$(".table tbody tr").hide();			
+			var curr = new Date();
+			var day1 = new Date(curr.setDate(curr.getDate() - curr.getDay()-7));
+			var day2 = new Date(curr.setDate(curr.getDate() - curr.getDay()+1));
+			var day3 = new Date(curr.setDate(curr.getDate() - curr.getDay()+2));
+			var day4 = new Date(curr.setDate(curr.getDate() - curr.getDay()+3));
+			var day5 = new Date(curr.setDate(curr.getDate() - curr.getDay()+4));
+			var day6 = new Date(curr.setDate(curr.getDate() - curr.getDay()+5));
+			var day7 = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
+			day1 = (day1.getMonth()+1) + "/" + day1.getDate() + "/" + day1.getFullYear();
+			day2 = (day2.getMonth()+1) + "/" + day2.getDate() + "/" + day2.getFullYear();
+			day3 = (day3.getMonth()+1) + "/" + day3.getDate() + "/" + day3.getFullYear();
+			day4 = (day4.getMonth()+1) + "/" + day4.getDate() + "/" + day4.getFullYear();
+			day5 = (day5.getMonth()+1) + "/" + day5.getDate() + "/" + day5.getFullYear();
+			day6 = (day6.getMonth()+1) + "/" + day6.getDate() + "/" + day6.getFullYear();
+			day7 = (day7.getMonth()+1) + "/" + day7.getDate() + "/" + day7.getFullYear();
+			$(".table tbody td.closedate:contains('" + day1 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day2 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day3 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day4 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day5 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day6 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day7 + "')").parent().show();
+			$(".table tbody td.solutions:not(:contains('Sites'))").parent().hide();
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#person").attr("src", imgFolder + "gilles.jpg");
+			if (shown==0) {
+				$("#message").html("No new Sites contracts last week for AEM as a Cloud Service.");
+			} else if (shown==1) {
+				$("#message").html(shown + " Sites contract last week for AEM as a Cloud Service!");
+			} else {
+				$("#message").html(shown + " Sites contracts last week for AEM as a Cloud Service!");
+			}
+			break;
+		case "lastweekassets":
+			$(".table tbody tr").hide();			
+			var curr = new Date();
+			var day1 = new Date(curr.setDate(curr.getDate() - curr.getDay()-7));
+			var day2 = new Date(curr.setDate(curr.getDate() - curr.getDay()+1));
+			var day3 = new Date(curr.setDate(curr.getDate() - curr.getDay()+2));
+			var day4 = new Date(curr.setDate(curr.getDate() - curr.getDay()+3));
+			var day5 = new Date(curr.setDate(curr.getDate() - curr.getDay()+4));
+			var day6 = new Date(curr.setDate(curr.getDate() - curr.getDay()+5));
+			var day7 = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
+			day1 = (day1.getMonth()+1) + "/" + day1.getDate() + "/" + day1.getFullYear();
+			day2 = (day2.getMonth()+1) + "/" + day2.getDate() + "/" + day2.getFullYear();
+			day3 = (day3.getMonth()+1) + "/" + day3.getDate() + "/" + day3.getFullYear();
+			day4 = (day4.getMonth()+1) + "/" + day4.getDate() + "/" + day4.getFullYear();
+			day5 = (day5.getMonth()+1) + "/" + day5.getDate() + "/" + day5.getFullYear();
+			day6 = (day6.getMonth()+1) + "/" + day6.getDate() + "/" + day6.getFullYear();
+			day7 = (day7.getMonth()+1) + "/" + day7.getDate() + "/" + day7.getFullYear();
+			$(".table tbody td.closedate:contains('" + day1 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day2 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day3 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day4 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day5 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day6 + "')").parent().show();
+			$(".table tbody td.closedate:contains('" + day7 + "')").parent().show();
+			$(".table tbody td.solutions:not(:contains('Assets'))").parent().hide();
+			var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			$("#person").attr("src", imgFolder + "nico.jpg");
+			if (shown==0) {
+				$("#message").html("No new Assets contracts last week for AEM as a Cloud Service.");
+			} else if (shown==1) {
+				$("#message").html(shown + " Assets contract last week for AEM as a Cloud Service!");
+			} else {
+				$("#message").html(shown + " Assets contracts last week for AEM as a Cloud Service!");
+			}
+			break;
+		case "2021h1":
+			$(".table tbody tr").hide();
+			$(".table tbody td.quarter:contains('2021 - Q1')").parent().show();			
+			$(".table tbody td.quarter:contains('2021 - Q2')").parent().show();
+			$("#person").attr("src", imgFolder + "loni.jpg");
+			$("#message").html("Great H1 everyone!");	
+			break;
+		case "2021h2":
+			$(".table tbody tr").hide();
+			$(".table tbody td.quarter:contains('2021 - Q3')").parent().show();			
+			$(".table tbody td.quarter:contains('2021 - Q4')").parent().show();
+			$("#person").attr("src", imgFolder + "loni.jpg");
+			$("#message").html("Let's keep up the momentum in H2!");	
+			break;
+		case "2022h1new":
+			$(".table tbody tr").hide();
+			$(".table tbody td.quarter:contains('2022 - Q1')").parent().show();			
+			$(".table tbody td.quarter:contains('2022 - Q2')").parent().show();
+			$(".table tbody td.quarter:contains('2020 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q2')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q3')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q4')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q2')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q3')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q4')").parent().hide();
+		    var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			var fromAms = $('.table tbody tr[style!="display: none;"] td.custtype:contains("ams")').length;
+			var fromOnp = $('.table tbody tr[style!="display: none;"] td.custtype:contains("onp")').length;
+			var fromNew = $('.table tbody tr[style!="display: none;"] td.custtype:contains("new")').length;
+			$("#person").attr("src", imgFolder + "tracy.jpg");
+			$("#message").html(shown + " customers signed their first CS contract in 2022 H1! " + fromAms + " from AMS, " + fromOnp + " from on-premise, and " + fromNew + " new to AEM.");	
+			break;
+
+ 		case "2022q1new":
+			$(".table tbody tr").hide();
+			$(".table tbody td.quarter:contains('2022 - Q1')").parent().show();			
+			//$(".table tbody td.quarter:contains('2022 - Q2')").parent().show();
+			$(".table tbody td.quarter:contains('2020 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q2')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q3')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q4')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q2')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q3')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q4')").parent().hide();
+		    var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			var fromAms = $('.table tbody tr[style!="display: none;"] td.custtype:contains("ams")').length;
+			var fromOnp = $('.table tbody tr[style!="display: none;"] td.custtype:contains("onp")').length;
+			var fromNew = $('.table tbody tr[style!="display: none;"] td.custtype:contains("new")').length;
+			$("#person").attr("src", imgFolder + "tracy.jpg");
+			$("#message").html(shown + " customers signed their first CS contract in 2022 Q1! " + fromAms + " from AMS, " + fromOnp + " from on-premise, and " + fromNew + " new to AEM.");	
+			break;
+
+ 		case "2022q2new":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.quarter:contains('2022 - Q2')").parent().show();
+			$(".table tbody td.quarter:contains('2020 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q2')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q3')").parent().hide();
+			$(".table tbody td.quarter:contains('2020 - Q4')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q1')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q2')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q3')").parent().hide();
+			$(".table tbody td.quarter:contains('2021 - Q4')").parent().hide();
+			$(".table tbody td.quarter:contains('2022 - Q1')").parent().hide();
+		    var total = parseInt(document.getElementById("total").innerHTML);
+			var hidden = $('.table tbody tr[style*="display: none"]').length;
+			var shown = total - hidden;
+			var fromAms = $('.table tbody tr[style!="display: none;"] td.custtype:contains("ams")').length;
+			var fromOnp = $('.table tbody tr[style!="display: none;"] td.custtype:contains("onp")').length;
+			var fromNew = $('.table tbody tr[style!="display: none;"] td.custtype:contains("new")').length;
+			$("#person").attr("src", imgFolder + "tracy.jpg");
+			$("#message").html(shown + " customers signed their first CS contract in 2022 Q2! " + fromAms + " from AMS, " + fromOnp + " from on-premise, and " + fromNew + " new to AEM.");	
+			break; 
+
+		case "2021q2":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.quarter:contains('2021 - Q2')").parent().show();
+			$("#person").attr("src", imgFolder + "loni.jpg");
+			$("#message").html("Great Q2 everyone!");	
+			break;
+		case "2021q3":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.quarter:contains('2021 - Q3')").parent().show();
+			$("#person").attr("src", imgFolder + "loni.jpg");
+			$("#message").html("Let's keep up the momentum in Q3!");	
+			break;
+		case "yrnotlive":
+			// load live data on button click if it didn't load with page
+			if ($(".table tbody td.ps:contains('E')").length==0 || $(".table tbody tr[class*='live']").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();			
+			var curr = new Date();
+			var oneyear = new Date(curr.setDate(curr.getDate() - 365));
+			$(".table tbody td.closedate").each(function() {
+				if (Date.parse($(this).html().split('<br>')[0]) < oneyear) {
+					$(this).parent().show();
+				}
+			});
+			$(".table tbody tr[class*='live']").hide();
+			$("#person").attr("src", imgFolder + "jm.jpg");
+			$("#message").html("Why aren't these customers live yet?");
+			break;
+		case "multiple":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.account:has('br')").parent().show();
+			$("#person").attr("src", imgFolder + "justin.jpg");
+			$("#message").html("Some customers license through more than one subsidiary.");
+			break;
+
+ 		case "americas":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.geo:contains('Americas')").parent().show();
+			$("#person").attr("src", imgFolder + "gagan.jpg");
+			$("#message").html("These customers are in the Americas geo.");	
+			break; 
+ 		case "apac":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.geo:contains('APAC')").parent().show();
+			$("#person").attr("src", imgFolder + "gagan.jpg");
+			$("#message").html("These customers are in the APAC geo.");	
+			break; 
+ 		case "emea":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.geo:contains('EMEA')").parent().show();
+			$("#person").attr("src", imgFolder + "gagan.jpg");
+			$("#message").html("These customers are in the EMEA geo.");	
+			break; 
+ 		case "japan":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.geo:contains('Japan')").parent().show();
+			$("#person").attr("src", imgFolder + "gagan.jpg");
+			$("#message").html("These customers are in the Japan geo.");	
+			break; 
+
+		case "problems":
+			$(".table tbody tr").hide();			
+			$(".table tbody td.solutions").each(function() {
+				if ($(this).html()=="") {
+					$(this).parent().show();
+				}
+			});
+			$("#person").attr("src", imgFolder + "damian.jpg");
+			$("#message").html("These customers did not license a core product, so whichever add-on they licensed is not usable.");
+			break;
+		case "amsfull":
+			// load ams data on button click if it didn't load with page
+			if ($(".table tbody td.amslist:contains('ams')").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();
+			$(".table tbody td.amslist:contains('ams')").parent().show();		
+			$("#person").attr("src", imgFolder + "damian.jpg");
+			$("#message").html("These customers showed up in the AMS list.");
+			break;
+		case "amsboth":
+			// load ams data on button click if it didn't load with page
+			if ($(".table tbody td.amslist:contains('ams')").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();			
+			$(".table tbody td.amslist:contains('ams')").parent().show();
+			$(".table tbody td.custtype:not(:contains('ams'))").parent().hide();	
+			//$(".table tbody td.amslist:contains('ams')").parent().hide();	
+			$("#person").attr("src", imgFolder + "damian.jpg");
+			$("#message").html("These customers showed up in both the AMS list and the wiki list.");
+			break;
+		case "amsmatchleft":
+			// load ams data on button click if it didn't load with page
+			if ($(".table tbody td.amslist:contains('ams')").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();			
+			$(".table tbody td.amslist:contains('ams')").parent().show();
+			$(".table tbody td.custtype:contains('ams')").parent().hide();
+			$("#person").attr("src", imgFolder + "damian.jpg");
+			$("#message").html("These customers showed up in the AMS list but not the wiki list.");
+			break;
+		case "amsmatchright":
+			// load ams data on button click if it didn't load with page
+			if ($(".table tbody td.amslist:contains('ams')").length==0) {
+				generateHtmlTable(csdata);
+			}
+			$(".table tbody tr").hide();			
+			$(".table tbody td.custtype:contains('ams')").parent().show();
+			$(".table tbody td.amslist:contains('ams')").parent().hide();
+			$("#person").attr("src", imgFolder + "damian.jpg");
+			$("#message").html("These customers showed up in the wiki list but not the AMS list.");
+			break;
+	}
+
+	// update filter count
+	var total = parseInt(document.getElementById("total").innerHTML);
+	var hidden = $('.table tbody tr[style*="display: none"]').length;
+	var shown = total - hidden;
+	document.getElementById("shown").innerHTML = shown;
+	
+}
+
+// load data tab by default
+document.getElementById("defaultTab").click();
+document.getElementById("filterall").click();
+</script>
+
+<script id="rendered-js">
+// define sets and set intersections
+var sets = [
+	{sets: ['Sites'], size: 1},
+	{sets: ['Assets'], size: 1},
+	{sets: ['Forms'], size: 1},
+	{sets: ['CIF'], size: 1}
+];
+
+var vchart = venn.VennDiagram();
+d3.select('#venn').datum(sets).call(vchart);
+
+var urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has("preview") || urlParams.has("pageId")) {
+	$("button.preview").removeClass("preview");
+}
+if (!urlParams.has("eccid") && !urlParams.has("pageId")) {
+	$("#btnAms1").addClass("hide");
+	$("#btnAms2").addClass("hide");
+	$("#btnAms3").addClass("hide");
+	$("#btnAms4").addClass("hide");
+}
+</script>

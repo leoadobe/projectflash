@@ -1,0 +1,225 @@
+[
+    {
+        "Customer": "Swisscom",
+        "Industry": "telecom",
+        "Keywords": "#cms #costs #personalization #localization #abtesting",
+        "Highlights": ["- Time savings through seamless workflows","- Personalized campaign messaging for customers","- Localized experiences for customers anywhere","- 40% uplift through testing with Adobe Target"],
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/swisscom-case-study.html"
+    },
+    {
+        "Customer": "T-Mobile",
+        "Industry": "telecom",
+        "Keywords": "#cms #speed #personalization",
+        "Highlights": "- Delivered truly targeted banners that increased conversion from 9% to 34%.",
+        "Highlights": "- Reduced page load times by 80%, leading to increased views and adoption.",
+        "Highlights": "- Increased the number of customers updating their own accounts by 23%.",
+        "Highlights": "- Watched mobile web traffic grown to 65% of all traffic due to mobile-friendlier designs.",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/summit/community/deep-dives/t-mobile.html"
+    },
+    {
+        "Customer": "CIBC",
+        "Industry": "finserv",
+        "Keywords": "#cms #personalization #effort #cx #optimization",
+        "Highlights": "Mobile conversion rates have risen 1.5x and web page conversions have nearly doubled.",
+        "Highlights": "Teams are saving tens of hours per day on content related development and management.",
+        "Highlights": "JD Powers ranked CIBC #1 for customer satisfaction among mobile banking apps in 2020",
+        "Highlights": "100k less phone calls to the call-center with solutions avaiable at the portal",
+        "Highlights": "Reuse of content based in customer audiences and behavior",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/cibc-case-study.html"
+    },
+    {
+        "Customer": "Walmart",
+        "Industry": "retail",
+        "Keywords": "#cms #ee #employeexperience #portal #autotag #personalization #ai #ml",
+        "Highlights": "- Integrated solution with Adobe Experience Manager + Analytics + Target + Commerce",
+        "Highlights": "- Personalization based on the nature of an employee’s role (important for a company that employs everyone from store associates and data scientists, to mechanics and marketers)",
+        "Highlights": "- Auto tags powered by Adobe’ Sensei AI to help with the organization and make content searchable",
+        "Highlights": "***Below is Confidential (just mention, do not share)***",
+        "Highlights": "- 1M unique visitors per day",
+        "Highlights": "- 41% decrease in YoY cost and 46% increase in NPS",
+        "Highlights": "- 2000 active authors and 85 re-usable components",
+        "Confidentiality": "Public and some Confidential",
+        "Link": "https://blog.adobe.com/en/publish/2020/07/08/walmart-built-one-of-the-worlds-largest-intranets-when-covid-19-hit-it-became-one-of-its-most-important-assets"
+    },
+    {
+        "Customer": "Caesars Entertainment",
+        "Industry": "travel hospitality",
+        "Keywords": "#cms #omnichannel #loyalty #personalization #optimization",
+        "Highlights": "- 70% increase in conversion rate by optimizing web interface",
+        "Highlights": "- 10% increase in loyalty program sign-up",
+        "Highlights": "- Guests interact in different screens and 60% make the purchase decision during the trip, so omnichannel is key",
+        "Highlights": "- Quantified design decisions to target and optimize content",
+        "Confidentiality": "Public",
+        "Link": "https://blog.adobe.com/en/publish/2019/03/26/caesars-entertainment-customizes-experiences-with-technology-transformation"
+    },
+    {
+        "Customer": "Walgreens ",
+        "Industry": "retail",
+        "Keywords": "#cms #omnichannel #headless",
+        "Highlights": "- 50% increase in overall traffic",
+        "Highlights": "- 30% increase in usage for mobile app",
+        "Highlights": "- 100M download for mobile app",
+        "Highlights": "- content is used in any channel, such as commerce, mobile app and push notifications for customers in nearby stores to getting a vaccine",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/walgreens-boots-alliance-case-study.html"
+    },
+    {
+        "Customer": "Esri ArcGis",
+        "Industry": "tech",
+        "Keywords": "#cms #dam #workfront",
+        "Highlights": "- 16 teams working together",
+        "Highlights": "- 25% reduction for duplicated assets",
+        "Highlights": "- From 2w to 1.5hr for approval processes",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/esri-case-study.html"
+    },
+    {
+        "Customer": "Philips",
+        "Industry": "cpg",
+        "Keywords": "#cms #personalization #abtesting",
+        "Highlights": "- 3x traffic increase for mobile devices",
+        "Highlights": "\"- 20% increase in click-thru rate testing \"\"Buy\"\" button in different variations\"",
+        "Highlights": "- Multivariate tests to get insights and optimize content",
+        "Highlights": "-- 635% increase in sigups",
+        "Highlights": "-- 15% increase in product views",
+        "Highlights": "-- 28% increase in products purchase",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/philips-case-study.html"
+    },
+    {
+        "Customer": "Playstation",
+        "Industry": "tech",
+        "Keywords": "#cms #timetovalue",
+        "Highlights": "800% faster to create new sections in the site",
+        "Highlights": "8x growth in site visitors through positioning of recent and updated content",
+        "Highlights": "40% improve in bounce rate",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/sony-interactive-entertainment-case-study.html"
+    },
+    {
+        "Customer": "Bose",
+        "Industry": "cpg",
+        "Keywords": "#cms #agility",
+        "Highlights": "Experience League as a training hub for the internal teams to help in the career development and skills creation for internal teams",
+        "Highlights": "6 ambassadors for Adobe solution to share information and knowledge for internal coworkers",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/bose-case-study.html"
+    },
+    {
+        "Customer": "PGA Tour",
+        "Industry": "sports",
+        "Keywords": "#cms #contentintelligence #ai #ml",
+        "Highlights": "9% growth in unique global visitors",
+        "Highlights": "26% growth for visits in digital channels",
+        "Highlights": "Storytelling + Content + Data to test and deliver the experience customer wants",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/pga-tour-case-study.html"
+    },
+    {
+        "Customer": "Informatica",
+        "Industry": "tech",
+        "Keywords": "#cms #b2b #costs",
+        "Highlights": "3x increase in response time",
+        "Highlights": "Costs reduction for IT and better precision of data for targeted accounts",
+        "Highlights": "61% growth um site visitors",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/informatica-case-study.html "
+    },
+    {
+        "Customer": "Adobe Creative Cloud",
+        "Industry": "tech",
+        "Keywords": "#dam #collaboration",
+        "Highlights": "300% increase in digital assets creation",
+        "Highlights": "SLAs & KPIs met through the progress tracking during the whole creation process by project managers",
+        "Highlights": "150 agencies, 12 offices working together in the same centralized repository",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/adobe-content-hub-case-study.html"
+    },
+    {
+        "Customer": "Adobe Creative Cloud",
+        "Industry": "tech",
+        "Keywords": "#cms ",
+        "Highlights": "37B pageviews p/y",
+        "Highlights": "45% increase in creative product franchise (Adobe Creative Cloud)",
+        "Highlights": "90% increase in click-through rate and 47% increase in email opens",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/adobe-experience-cloud-case-study.html"
+    },
+    {
+        "Customer": "Asics",
+        "Industry": "retail",
+        "Keywords": "#dam #effort",
+        "Highlights": "30% reduction for “lost time” in administrative tasks during the creation process",
+        "Highlights": "700k assets being used globally",
+        "Highlights": "Reuse: ",
+        "Highlights": "Elimination of duplicated content, e.g. different photoshoots for the same campaigns in different regions",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/asics-case-study.html"
+    },
+    {
+        "Customer": "Under Armour",
+        "Industry": "retail",
+        "Keywords": "#dam #integration #apis",
+        "Highlights": "2x increase in daily active users and in assets downloaded",
+        "Highlights": "Flexibility for internal system integration, such as PIM and MDM through APIs",
+        "Highlights": "4hrs of saved time by users when using the solutions",
+        "Confidentiality": "Public",
+        "Link": " https://business.adobe.com/customer-success-stories/under-armour-case-study.htm"
+    },
+    {
+        "Customer": "IBM",
+        "Industry": "tech",
+        "Keywords": "#cms #localization #multisite",
+        "Highlights": "From 3 days to less than 1 hour to create new landing pages",
+        "Highlights": "Reuse",
+        "Highlights": "Reusable fragments to remove +10k templates",
+        "Highlights": "From 40M to 6k pages",
+        "Highlights": "From 40 asset repositories to 1",
+        "Highlights": "From 15 to up to 3 days for the translation process with visibility of the entire process",
+        "Confidentiality": "Public",
+        "Link": "https://blog.adobe.com/en/publish/2022/03/15/ibm-leans-on-adobe-experience-cloud-as-it-looks-to-accelerate-business-growth?mv=social&mv2=ownsoc-org&sdid=YKHWGBDX&utm_source=pocket_mylist"
+    },
+    {
+        "Customer": "HPE",
+        "Industry": "tech",
+        "Keywords": "#cms #uptime #cloud #personalization",
+        "Highlights": "99,9% uptime for 5 years, surpassing industry standard",
+        "Highlights": "Personalization location-based and behavior-based customization, helping B2B sales department",
+        "Highlights": "50 sites country-specific in 10+ different languages",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/hewlett-packard-enterprise-case-study.html"
+    },
+    {
+        "Customer": "VW",
+        "Industry": "retail",
+        "Keywords": "#cms #commerce #magento #integration #api #pim #mdm",
+        "Highlights": "10 months to migrate eCommece and CMS solutions, already integrated",
+        "Highlights": "Integration with parts information from different systems (description, dimension, price, SKU, inventory, etc.), presented in a single portal",
+        "Highlights": "Adobe Commerce + Experience Manager solutions integrated directly into the cloud",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/vw-classic-parts-case-study.html"
+    },
+    {
+        "Customer": "Bridgestone",
+        "Industry": "retail",
+        "Keywords": "#cms #costs deployment #cloud #agility #devops",
+        "Highlights": "$7M in cost savings since 2015 by unifying CMS and hosting platform",
+        "Highlights": "46% reduction in investment for building new websites, in addition to reducing launch time from 16 to 6 weeks",
+        "Highlights": "10x improvement in deployment processes. Deployment issues are resolved within 25 minutes",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/bridgestone-case-study.html"
+    },
+    {
+        "Customer": "National Bank of Canada",
+        "Industry": "finserv",
+        "Keywords": "#cms #personalization #costs #cx #testing",
+        "Highlights": "30% cost savings per personalization action",
+        "Highlights": "$150K in development cost savings to deliver personalized content to clients based on specific audiences",
+        "Highlights": "CMS unified to deliver multivariate content across different marketing channels",
+        "Confidentiality": "Public",
+        "Link": "https://business.adobe.com/customer-success-stories/national-bank-of-canada-case-study.html"
+    }
+]

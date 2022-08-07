@@ -1,0 +1,98 @@
+﻿20220504;NAM;Industry;BDR;Tier;Current stack;Salesplay;Comments;AEM Value;Sites;Assets;DX Value;DM Value;Opportunities
+B3;Caixeta, Diogo;Finserv;Karen;1;Lumis;Content at Scale;Talk with Vilt to understand move to CS;USD 0;USD 0;USD 0;USD 0;USD 0;
+Banco BMG;Mello Filho, Rubens;Finserv;Karen;1;Lumis;Content at Scale;Lumis with hosting at AWS;USD 0;USD 0;USD 0;USD 0;USD 0;
+Banco de Chile;Pilon, Pablo;Finserv;Vero;1;HCL;Legacy;What we do with Forms? They're using HCL/IBM;USD 0;USD 0;USD 0;USD 0;USD 0;
+Banco Inter;Mello Filho, Rubens;Finserv;Karen;1;;Content at Scale;Headless with Gatsby hosted at AWS;USD 0;USD 0;USD 0;USD 0;USD 0;
+Banco Original;Mello Filho, Rubens;Finserv;Karen;1;Oracle;Legacy;Oracle with CDP and it's look AWS with OT;USD 0;USD 0;USD 0;USD 0;USD 0;
+Banco Safra;Mello Filho, Rubens;Finserv;Karen;1;Headless;Omnichannel;Headless at AWS;USD 0;USD 0;USD 0;USD 0;USD 0;
+Banco Votorantim;Mello Filho, Rubens;Finserv;Karen;1;Headless;Omnichannel;Headless;USD 0;USD 0;USD 0;USD 0;USD 0;
+Bancolombia;TBH;Finserv;Vero;1;HCL;Legacy;They're using HCL/IBM at AWS;USD 0;USD 0;USD 0;USD 0;USD 0;
+Banorte;Cabrera, Victor;Finserv;Vero;1;Headless;Omnichannel;Looks like a headless/custom site;USD 0;USD 0;USD 0;USD 0;USD 0;
+BTG Pactual;Caixeta, Diogo;Finserv;Karen;1;AEM;;The main dotcom is headless at AWS. What elese we have there?;USD 0;USD 0;USD 0;USD 0;USD 0;
+C6 Bank;Caixeta, Diogo;Finserv;Karen;1;Headless;Omnichannel;Headless with Gatsby;USD 0;USD 0;USD 0;USD 0;USD 0;
+Coopeuch;Pilon, Pablo;Finserv;Vero;1;Magento;Omnichannel;The portail is built over Magento. Is that right?;USD 0;USD 0;USD 0;USD 0;USD 0;
+Credicorp;Pilon, Pablo;Finserv;Vero;1;HCL;Legacy;How is the IBM replacement project there?;USD 0;USD 0;USD 0;USD 0;USD 0;Q4
+EBANX;Caixeta, Diogo;Finserv;Karen;1;Hubspot;Omnichannel;Hubspot CMS;USD 0;USD 0;USD 0;USD 0;USD 0;
+Enel;Ollivier, Jessica;Telco;Nelvi;1;;Omnichannel;They do have Sites, right?;USD 0;USD 0;USD 0;USD 0;USD 0;
+Entel;Ollivier, Jessica;Utilities;Nelvi;1;?;Omnichannel;Looks like custom at AWS ;USD 0;USD 0;USD 0;USD 0;USD 0;Q4
+Experian;Caixeta, Diogo;Finserv;Karen;1;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;Q3
+Gentera;Cabrera, Victor;Finserv;Vero;1;?;Legacy;Opps with MKTO, AA, AT. Looks like they use OT at Google;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Aval;TBH;Finserv;Vero;1;Liferay & HCL;Legacy;Grupo Aval in Liferay, Banco Bogota and Corficolombiana in HCL;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Bal;Cabrera, Victor;Finserv;Vero;1;AEM;;Profuturo uses MKTO and there's na opp for AEMS;USD 0;USD 0;USD 0;USD 0;USD 0;Q4
+Grupo Bolívar;TBH;Finserv;Vero;1;"Davivienda - HCL
+Seguros - Custom at AWS";Legacy;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Éxito;TBH;Retail;Nelvi;1;Drupal/Pantheon;Commerce;Group site at Drupal and Exito at VTEX;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Supervielle;Pilon, Pablo;Finserv;Vero;1;;Omnichannel;Headless at AWS;USD 0;USD 0;USD 0;USD 0;USD 0;
+Intercorp Perú;Pilon, Pablo;Finserv;Vero;1;Liferay;Legacy;Liferay at AWS. Uses Target and Analytics;USD 0;USD 0;USD 0;USD 0;USD 0;
+Liberty Latin America;Ollivier, Jessica;Retail;Nelvi;1;;Multisite;Usan Drupal 8;USD 0;USD 0;USD 0;USD 0;USD 0;
+NuBank;Caixeta, Diogo;Finserv;Karen;1;WP;Omnichannel;WP with Headless at AWS;USD 0;USD 0;USD 0;USD 0;USD 0;
+PicPay;Mello Filho, Rubens;Finserv;Karen;1;;;Headless at AWS;USD 0;USD 0;USD 0;USD 0;USD 0;
+SulAmérica;Mello Filho, Rubens;Finserv;Karen;1;?;Content at Scale;?;USD 0;USD 0;USD 0;USD 0;USD 0;
+XP Investimentos;Caixeta, Diogo;Finserv;Karen;1;WP;Omnichannel;WP at Azure with Segment.io;USD 0;USD 0;USD 0;USD 0;USD 0;
+Banco Bradesco;Caixeta, Diogo;Finserv;Karen;2;OT;;;USD 0;USD 0;USD 0;USD 0;USD 0;Q4
+DISH Network;Ollivier, Jessica;Retail;Nelvi;2;;Omnichannel;;USD 0;USD 0;USD 0;USD 0;USD 0;Q4
+Empresas Juan Yarur;Pilon, Pablo;Finserv;Vero;2;;Content at Scale;Bci - Uses SFDC (CRM & Campaign) and hosted at Azure;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo MVS;Ollivier, Jessica;Media;Nelvi;2;;Omnichannel;Dish in a custom/headless with Vue;USD 0;USD 0;USD 0;USD 0;USD 0;
+Latam Airlines;TBH;Travel;Nelvi;2;Custom;Learning Portal;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Lojas Renner;Vezzoli Junior, Joao Paulo;Retail;Cassio;2;Custom;Omnichannel;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Natura;Vezzoli Junior, Joao Paulo;Retail;Cassio;2;Acquia/Drupal;Omnichannel;;USD 0;USD 0;USD 0;USD 0;USD 0;Q4
+Novator Partners;Ollivier, Jessica;Telco;Nelvi;2;;Omnichannel;WOW has a Gatsby with AWS;USD 0;USD 0;USD 0;USD 0;USD 0;
+Porto Seguro;Mello Filho, Rubens;Finserv;Karen;2;OT;Legacy;Currently using OT;USD 0;USD 0;USD 0;USD 0;USD 0;
+Santander;Cabrera, Victor;Finserv;Vero;2;SDL Tridion;Legacy;Angular w/ Google Optimize;USD 0;USD 0;USD 0;USD 0;USD 0;
+SKY Brasil;Franca, Wagner;Media;Cassio;2;Liferay;Legacy;They're Liferay for a long time with several participations in events. Also, they have BlueKai, Datadog and Goptimize;USD 0;USD 0;USD 0;USD 0;USD 0;
+Alelo;Caixeta, Diogo;Finserv;Karen;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;Q2
+América Móvil;Franca, Wagner;Telco;Nelvi;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;Q4
+AT&T;Ollivier, Jessica;Telco;Nelvi;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+B2W Companhia Global do Varejo;Vezzoli Junior, Joao Paulo;Retail;Cassio;3;;Content Velocity;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Banco del Estado de Chile;Pilon, Pablo;Finserv;Vero;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;Q3
+Banco do Brasil (BB);Mello Filho, Rubens;Finserv;Karen;3;;;Looks liks Oracle or IBM;USD 0;USD 0;USD 0;USD 0;USD 0;
+Bank of Nova Scotia;Cabrera, Victor;Finserv;Vero;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Brescia;Pilon, Pablo;Finserv;Vero;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Caixa Economica Federal;Caixeta, Diogo;Finserv;Karen;3;;;How to engage in a Public Sector? Or are any other subsidiaries?;USD 0;USD 0;USD 0;USD 0;USD 0;
+Cencosud;TBH;Retail;Nelvi;3;Acquia/Drupal;Multisite;;USD 0;USD 0;USD 0;USD 0;USD 0;
+CitiBanamex;Cabrera, Victor;Finserv;Vero;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+CNP Assurances;Caixeta, Diogo;Finserv;Karen;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Cofra;Vezzoli Junior, Joao Paulo;Retail;Nelvi;3;;Content Velocity;C&A;USD 0;USD 0;USD 0;USD 0;USD 0;
+Colombiana De Comercio;TBH;Retail;Nelvi;3;SAP Commerce Cloud;Commerce;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Companhia Brasileira de Distribuição (CBD);Vezzoli Junior, Joao Paulo;Retail;Cassio;3;;Content Velocity;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Distribuidora Liverpool;TBH;;Nelvi;3;;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Fomento Económico Mexicano;TBH;Retail;Nelvi;3;;;FEMSA;USD 0;USD 0;USD 0;USD 0;USD 0;
+G&K Holding;Vezzoli Junior, Joao Paulo;Retail;Cassio;3;;Content Velocity;O Boticario;USD 0;USD 0;USD 0;USD 0;USD 0;
+GMG Holding;TBH;Retail;Nelvi;3;AEM;;Grupo Monge;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Coppel;TBH;Retail;Nelvi;3;HCL Commerce;Commerce ;Using HCL Commerce;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Financiero Galicia (GFG);Pilon, Pablo;Finserv;Vero;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Globo;Franca, Wagner;Media;Cassio;3;;Content at Scale;What we're doing there;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Guararapes Confecções;Vezzoli Junior, Joao Paulo;Retail;Cassio;3;;Content Velocity;Riachuelo;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo JCA;Franca, Wagner;Retail;Cassio;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Nacional Provincial;Cabrera, Victor;Finserv;Vero;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Record;Franca, Wagner;Media;Cassio;3;;Omnichannel;Custom;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Salinas;Cabrera, Victor;Finserv;Vero;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Grupo Suramericana;TBH;Finserv;Vero;3;;;;USD 0;USD 0;USD 0;USD 0;USD 0;Q3
+Home Depot;TBH;Retail;Nelvi;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Hyundai Motor Group;Ollivier, Jessica;Retail;Nelvi;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Ilumno;TBH;Tech;Nelvi;3;;;?;USD 0;USD 0;USD 0;USD 0;USD 0;
+Itausa;Mello Filho, Rubens;Finserv;Karen;3;AEM;;ContentStack;USD 0;USD 0;USD 0;USD 0;USD 0;
+Magazine Luiza;Vezzoli Junior, Joao Paulo;Retail;Cassio;3;;Omnichannel;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Minerals Technologies;TBH;Tech;Nelvi;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Nissan;Ollivier, Jessica;Retail;Nelvi;3;AEM;;Uses AEMS;USD 0;USD 0;USD 0;USD 0;USD 0;
+Raia Drogasil;Vezzoli Junior, Joao Paulo;Retail;Cassio;3;;Content Velocity;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Samsung;Franca, Wagner;Retail;Cassio;3;AEM;;They use AEM and also VTEX for Commerce;USD 0;USD 0;USD 0;USD 0;USD 0;
+Soriana;TBH;Retail;Nelvi;3;Salesforce Commerce Cloud;Commerce;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Stellantis;Caixeta, Diogo;Retail;Cassio;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Synergy Group;TBH;Travel;Nelvi;3;AEM;;Avianca;USD 0;USD 0;USD 0;USD 0;USD 0;
+Telecom Argentina;Ollivier, Jessica;Retail;Nelvi;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;Q4
+Telecom Italia;Franca, Wagner;Retail;Cassio;3;Acquia/Drupal;Omnichannel;They're with Acquia with contract renewal next year (FY23);USD 0;USD 0;USD 0;USD 0;USD 0;
+Telefónica;Franca, Wagner;Retail;Cassio;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;Q4
+Telemar Norte Leste;Franca, Wagner;Retail;Cassio;3;;Content at Scale;They're an Oracle-shop, however they're going be sold. How's that impact us?;USD 0;USD 0;USD 0;USD 0;USD 0;
+Tiendas Chedraui;TBH;Retail;Nelvi;3;SAP Commerce Cloud;Commerce;;USD 0;USD 0;USD 0;USD 0;USD 0;
+TRIP Linhas Áereas;Franca, Wagner;Travel;Cassio;3;AEM;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Universidad Del Valle;Ollivier, Jessica;Education;Nelvi;3;;Content at Scale;;USD 0;USD 0;USD 0;USD 0;USD 0;
+Universidad Tecnológica de México (UNITEC);Ollivier, Jessica;Education;Nelvi;3;AEM;;Usan AEM Sites;USD 0;USD 0;USD 0;USD 0;USD 0;
+Walmart;TBH;Retail;Nelvi;3;;;;USD 0;USD 0;USD 0;USD 0;USD 0;
+"Applied filters:
+MAJOR_OPG1 is not (Blank)";;;;;;;;;;;;;
+Banco Bilbao Vizcaya Argentaria (BBVA);Cabrera, Victor;Finserv;;;;;They USE AEM sites + AT;USD 0;USD 0;USD 0;USD 0;USD 0;
+MetLife;Cabrera, Victor;Finserv;;;;;Uses AEMS;USD 0;USD 0;USD 0;USD 0;USD 0;
+PARENT NAME;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;; ;;;;;;
