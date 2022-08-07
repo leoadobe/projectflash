@@ -140,9 +140,7 @@ var firstAvailCol;if(typeof(matrix[rowIndex])=="undefined"){matrix[rowIndex]=[];
       $.get(csvFile, function(data) {
         var tableHTML = '<table class="' + options.tableClass + '">';
         //LEO - START
-        console.log(data);
         data = data.replaceAll(',', '<br>');
-        console.log(data);
         //LEO - END
         var lines = data.replace('\r','').split('\n');
         var printedLines = 0;
