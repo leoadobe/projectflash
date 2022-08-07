@@ -174,7 +174,12 @@ var firstAvailCol;if(typeof(matrix[rowIndex])=="undefined"){matrix[rowIndex]=[];
               (printedLines % 2) ? oddOrEven = 'odd' : oddOrEven = 'even';
               tableHTML += '<tr class="' + options.trClass + ' ' + oddOrEven + '">';
               $.each(items, function(itemCount, item) {
-                tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
+                if(itemCount+1 == items.length)
+                {
+                  tableHTML += '<td class="' + options.tdClass + '"><a href="' + item + '" target="_blank">' + item + '<a/></td>';
+                }
+                else
+                  tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
               });
               tableHTML += '</tr>';
             }
