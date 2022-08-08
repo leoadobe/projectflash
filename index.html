@@ -1,5 +1,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
+<!-- LEO - START -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- LEO - END -->
 <script>
 /********************* Custom controls script: by Josh *******************/
 
@@ -173,13 +175,34 @@ var firstAvailCol;if(typeof(matrix[rowIndex])=="undefined"){matrix[rowIndex]=[];
               }
               (printedLines % 2) ? oddOrEven = 'odd' : oddOrEven = 'even';
               tableHTML += '<tr class="' + options.trClass + ' ' + oddOrEven + '">';
+              var key;
               $.each(items, function(itemCount, item) {
-                if(itemCount+1 == items.length)
+                //LEO - START
+                //first row
+                if(itemCount==0)
+                {
+                  //key = item.toLowerCase().replaceAll(' ','_');
+                  //tableHTML += '<td class="' + options.tdClass + '"><a href="#" data-toggle="modal" data-target="#'+ key +'"><b>' + item + '</b></a></td>';
+                  tableHTML += '<td class="' + options.tdClass + '"><b>' + item + '</b></a></td>';
+                }
+                //last row
+                else if(itemCount+1 == items.length)
                 {
                   tableHTML += '<td class="' + options.tdClass + '"><a href="' + item + '" target="_blank">' + item + '<a/></td>';
+                }                
+                //MODAL FOR POTENTIAL last row
+                /*
+                else if(itemCount+1 == items.length)
+                {
+                  tableHTML += '<td class="modal fade modal-dialog modal-content modal-body" id="'+ key +'" role="dialog">'+ item + '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button></td>';
                 }
+                */
+                //other rows      
                 else
+                {
                   tableHTML += '<td class="' + options.tdClass + '">' + item + '</td>';
+                }
+                //LEO - END
               });
               tableHTML += '</tr>';
             }
@@ -225,6 +248,9 @@ var firstAvailCol;if(typeof(matrix[rowIndex])=="undefined"){matrix[rowIndex]=[];
 <style>
 /* tables */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+/* LEO - START */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
+/* LEO - END */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700|Source+Sans+Pro:100,300,400,600,700,300italic,400italic,600italic,700italic");
 $heading_font: 'Roboto Condensed';
 .databaseTable_holder {
