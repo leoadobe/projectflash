@@ -185,11 +185,11 @@ var firstAvailCol;if(typeof(matrix[rowIndex])=="undefined"){matrix[rowIndex]=[];
                   //tableHTML += '<td class="' + options.tdClass + '"><a href="#" data-toggle="modal" data-target="#'+ key +'"><b>' + item + '</b></a></td>';
                   tableHTML += '<td class="' + options.tdClass + '"><b>' + item + '</b></a></td>';
                 }
-                //last row
-                else if(itemCount+1 == items.length)
+                //last and second-last row
+                else if( (itemCount+1 == items.length) || (itemCount+2 == items.length))
                 {
                   tableHTML += '<td class="' + options.tdClass + '"><a href="' + item + '" target="_blank">' + item + '<a/></td>';
-                }                
+                }
                 //MODAL FOR POTENTIAL last row
                 /*
                 else if(itemCount+1 == items.length)
