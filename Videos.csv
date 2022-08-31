@@ -9,6 +9,7 @@
 7;AEMS;Authoring;SEO;;None;;;
 8;AEMS;Authoring;Quick site;Quick Site Creation with Templates;spot;#sitecreation,#quicksite,#template;https://adobe.sharepoint.com/:v:/s/AEMLatam/Eb-6z_6HtLVBneEGoD6Pk1IBS-xukXyJZCsejqYGiu90aw?e=BxpgzN;
 9;AEMS;Authoring;Multisite;Multisite Management;None;;;
+9;AEMA;Authoring;Content Automation;Auomate your image creation and edition;spot;"#assets,#photoshop,#contentautomation;#filters";https://adobe.sharepoint.com/:v:/s/AEMLatam/Edw6bc7b1XhLg1h99lXtIDgBGWEECIQCtYALsEfFaZ_rBw?e=MS7oDb;
 10;AEMA;Collaboration;Asset link;Creative Cloud (Photoshop) integration;spot;#creativecloud,#photoshop,#integration;https://adobe.sharepoint.com/:v:/s/AEMLatam/EYFEGF5_LZZIgdREv5CRCZgBW625v6o63KXHzrWkwBJdKA?e=UW4bOf;
 11;AEMA;Collaboration;Workflow;Workflow to process your assets;spot;#dam,#workflow,#process,#bpm,#profile;https://adobe.sharepoint.com/:v:/s/AEMLatam/EYoZXO2c1KRGumbUVLitexkBCzHo6dKFyrYCpMHc1cpaiw?e=9oiIqh;
 12;AEMA;Collaboration;Annotation;Image and Video Annotation for Workflow;spot;#annotation,#workflow;https://adobe.sharepoint.com/:v:/s/AEMLatam/EewwAqUsmWREiOaXEzp6MzgBb7P-xmHJcFW7jIZxiRg43g?e=V1q5vB;
@@ -36,6 +37,7 @@
 28;AEMS;Content as a service;Omnichhanel;Omnichannel Experiences at Email, Chat, Voice and Mobile App;quick;#app,#email,#voice,#chat,#headless,#omnichannel;https://adobe.sharepoint.com/:v:/s/AEMLatam/ER2KdfEIxRZIo_wBVSkqvfIBJqabL1yiCV722Cmlvl8xRw?e=vqS7yy;
 28;AEMS;Content as a service;Headless;Headless CMS with JSON Output;spot;#headless,#json,#contentfragment,#cf;https://adobe.sharepoint.com/:v:/s/AEMLatam/ETOrrf0k0a1FpY3VtM80Kx8B4P6nuzswlY7bzuwerdStlQ?e=eDNvuQ;https://youtu.be/9t2uw_pZ-no
 29;AEMS;Content as a service;Headless;Headless CMS with GraphQL;spot;#headless,#json,#graphql,#javascript;https://adobe.sharepoint.com/:v:/s/AEMLatam/EVGjNfZAEstGnQES35zBBRYBJW9TVeQi-7sEVuqWR2NYhw?e=sRbXXC;
+29;AEMS;Content as a service;Headless;GraphQL with real time example;spot;#headless,#json,#graphql,#javascript;https://adobe.sharepoint.com/:v:/s/AEMLatam/ETmQ0QA5KtVGhsUnvh5NiuUB4sWY-rkBVZ8_yZJv3aaW5Q?e=7d7OY8;
 30;AEM;Content as a service;Screens;;None;;;
 31;AEMA;Brand Portal;Brand Portal;Build your Brand Portal with published media;None;;;
 31;AEMA;Dynamic Media;Auto responsive images;Dynamic Media with automatic responsive images;spot;#dynamicmedia,#responsive;https://adobe.sharepoint.com/:v:/s/AEMLatam/EY91KZA7YOpPivbOp4-zPjIB5iKaSBu1PTLhsT0EN3v1vA?e=tsZx8O;https://youtu.be/7uOL2RhLbmw
