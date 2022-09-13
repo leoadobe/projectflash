@@ -1,62 +1,71 @@
-﻿#;Solution;Capability;Feature;Title;Type;Keywords;Internal Link;External link
-1;AEMS;Authoring;Core Components;;None;;;
-2;AEMS;Authoring;Adobe XD UI Kit;Prototype wiith Adobe XD;spot;#adobexd,#xd,#prototype,#design;https://adobe.sharepoint.com/:v:/s/AEMLatam/EYzaPMrG0GpLm22xbw6r9l8B9kYX5fXCHipwvM-lyzzm4w?e=CZo8RG;
-3;AEMS;Authoring;Style System;Style System with Design Variations;spot;#designsystem,#style,#variation;https://adobe.sharepoint.com/:v:/s/AEMLatam/EXtewjYSv7pAukK5bDdV0QkBfiOKmMU1niDFRmcYSrMiEA?e=WnAjqA;https://youtu.be/wYivVBghvVA
-4;AEMS;Authoring;Editable Templates;Quick Site Creation with Templates;spot;#sitecreation,#quicksite,#template;https://adobe.sharepoint.com/:v:/s/AEMLatam/Eb-6z_6HtLVBneEGoD6Pk1IBS-xukXyJZCsejqYGiu90aw?e=BxpgzN;
-5;AEMS;Authoring;Page Authoring;Page Authoring with Components;spot;#authoring,#page;https://adobe.sharepoint.com/:v:/s/AEMLatam/EdS0SY5dzNhBv-XXiq69Cf8BkeFKsFrVunfFWJHQPE7xGg?e=X6S4zd;
-5;AEMS;Authoring;Page Authoring;Responsive Page Authoring with Components;spot;#authoring,#page,#responsive;https://adobe.sharepoint.com/:v:/s/AEMLatam/EVh7sgKMNJdDiuvM6tqyXwAB-sRIGCnBSyQaBeAC3g_0Xw?e=Ss6mwQ;
-6;AEMS;Authoring;Metadata;Metadata Governance;spot;#metadata,#asset,#attribute,#governance;https://adobe.sharepoint.com/:v:/s/AEMLatam/EfLcW8716sNEpWzXmtw6yDUBv-I7hmlbZVXqWoGq18ITlA?e=l6eCJi;
-7;AEMS;Authoring;SEO;;None;;;
-8;AEMS;Authoring;Quick site;Quick Site Creation with Templates;spot;#sitecreation,#quicksite,#template;https://adobe.sharepoint.com/:v:/s/AEMLatam/Eb-6z_6HtLVBneEGoD6Pk1IBS-xukXyJZCsejqYGiu90aw?e=BxpgzN;
-9;AEMS;Authoring;Multisite;Multisite Management;None;;;
-9;AEMA;Authoring;Content Automation;Auomate your image creation and edition;spot;"#assets,#photoshop,#contentautomation;#filters";https://adobe.sharepoint.com/:v:/s/AEMLatam/Edw6bc7b1XhLg1h99lXtIDgBGWEECIQCtYALsEfFaZ_rBw?e=MS7oDb;
-10;AEMA;Collaboration;Asset link;Creative Cloud (Photoshop) integration;spot;#creativecloud,#photoshop,#integration;https://adobe.sharepoint.com/:v:/s/AEMLatam/EYFEGF5_LZZIgdREv5CRCZgBW625v6o63KXHzrWkwBJdKA?e=UW4bOf;
-11;AEMA;Collaboration;Workflow;Workflow to process your assets;spot;#dam,#workflow,#process,#bpm,#profile;https://adobe.sharepoint.com/:v:/s/AEMLatam/EYoZXO2c1KRGumbUVLitexkBCzHo6dKFyrYCpMHc1cpaiw?e=9oiIqh;
-12;AEMA;Collaboration;Annotation;Image and Video Annotation for Workflow;spot;#annotation,#workflow;https://adobe.sharepoint.com/:v:/s/AEMLatam/EewwAqUsmWREiOaXEzp6MzgBb7P-xmHJcFW7jIZxiRg43g?e=V1q5vB;
-13;AEM;Collaboration;Permission;;None;;;
-14;AEMA;Collaboration;Versioning;Media Versioning and Comparison;spot;#asset,#version,#comparison;https://adobe.sharepoint.com/:v:/s/AEMLatam/EbY5Y1oJO_dLi1Yk2PGiRCUB8ySuKmDd-F3adjpJhMrBZw?e=ubk7ef;
-15;AEMF;Collaboration;Data mapping and workflow form submission;Data Integration and Workflow;quick;#form,#integration,#salesforce,#workflow;https://adobe.sharepoint.com/:v:/s/AEMLatam/ES-adNSxVKlDop9EdCObQ-IBAGYWtyERRpyKeQ7iFzsYiQ?e=TwuO1Z;
-16;AEMS;Fluid Experiences;Content Fragment Editor;Content Fragment Editor;spot;#contentfragment,#cf,#headless;https://adobe.sharepoint.com/:v:/s/AEMLatam/EWviGXVFukZIp2sgQ5VR-fAB7GBYVB9H-tYkMwXE-tQvPA?e=4iIQUu;https://youtu.be/jdS88GwYGKo
-17;AEMS;Fluid Experiences;Content Fragment (JSON/HTML);Content Variations for specific channels;spot;#contentfragment,#cf,#omnichannel,#variation;https://adobe.sharepoint.com/:v:/s/AEMLatam/ESCG5EU-mmhPi9tsaYwJuVwBjPIeok4KzvOUdZr3vFy9Kw?e=d9auZM;
-17;AEMS;Fluid Experiences;Experience Fragment;Variations for your content with Experience Fragments;spot;#xf,#experiencefragment,#variation,#content,#omnichannel;https://adobe.sharepoint.com/:v:/s/AEMLatam/Edp1HkvIPNtAiYr4oV5KGF8BagmF-4nmt2JpW38QVx-ulA?e=dfrGv4;
-17;AEMS;Fluid Experiences;Experience Fragment;Responsive Components with Experience Fragments;spot;#responsive,#experiencefragment,#xf;https://adobe.sharepoint.com/:v:/s/AEMLatam/EQypnTlGUJdAq0hO-DuGlLUBIW9lC4jnjNpFQRGmGMfO9A?e=cY0v0b;https://youtu.be/jSd6XgrPA4s
-18;AEMS;Fluid Experiences;PWA;Make any page a PWA;None;;;
-19;AEMS;Fluid Experiences;SPA Editor;SPA Editor with in-context editing;spot;#spa,#authoring,#javascript,#react,#angular,#incontext;https://adobe.sharepoint.com/:v:/s/AEMLatam/EZS4ap8poAdFnLjLKK4Dsh4BRm_wgqwVFTLYhIBG0KG72w?e=agmHzO;https://youtu.be/kBuCpOvN_tY
-20;AEMS;Analytics;Content Insights;Insights for your content;None;;;
-20;AEMA;Analytics;Assets Insights;Insights to understand how your assets are performing;spot;#asset,#insights,#performance,#analytics;https://adobe.sharepoint.com/:v:/s/AEMLatam/EWzY-Zy9SjRHji8N-A-dtkQBl9GswLLKPB3hT7oEg_ALPg?e=jHv9cF;
-21;AEMS;Analytics;Analytics Insights;Analytics with Setup Automated for AEM Site Performance;spot;#sites,#performance,#analytics,#siteperformance;https://adobe.sharepoint.com/:v:/s/AEMLatam/Eb0FjD3f7s1CrMlPiEZ2byYBEnasz6QZge4JoL6bpmpNbA?e=0Kuwre;
-22;AEMS;Personalization;Contextualization;Contextualization for logged users;spot;#personalization,#contextualization,#authenticated,#portal;https://adobe.sharepoint.com/:v:/s/AEMLatam/EdyXjlnnMxlHnXr9JlvIWfsB88Th_hiKyZENWo0jwZImCw?e=nRhokS;
-23;AEMS;Personalization;Experience Fragment to Adobe Target;Experience Fragments for Personalization & AB Test with Adobe Target;quick;#xf,#experiencefragment,#abtest,#personalization,#target;https://adobe.sharepoint.com/:v:/s/AEMLatam/EeFNziG8_Y1Lnbwr2E1IX8wBEfRKRXk-mKsUeiJXScqxhg?e=4mxYQW;
-23;AEMS;Personalization;Experimentation at Marriot;Experimentation of experiences at Marriot digital chanels;spot;#personalization,#abtest,#experimentation,#target;https://adobe.sharepoint.com/:i:/s/AEMLatam/Eb_ozVEsNT1JsLbz-Rpeh84BJ36P1nqjOyW3Apq9KFnTQQ?e=F0rsUv;
-23;AEMF;Personalization;A/B Tests;AB Tests for your Digital Forms to target your audience;spot;#form,#personalization,#optimization,#abtest;https://adobe.sharepoint.com/:v:/s/AEMLatam/ERW8njOuM8pLpMUvGgqrp2UBTA4a2x3Rpd7TBpj-beXKRw?e=ivoSZc;
-24;AEMA;Artificial Intelligence;Search;Intelligent Search by Similar Images using AI;#spot;#search,#ai,#sensei,#similarimages;https://adobe.sharepoint.com/:v:/s/AEMLatam/EVVGW3vpVDhGg8JTg_zz_iIBo6dyN5mRuYSGhRBYI9_jyg?e=hYCs8X;https://youtu.be/phnKnEvno4A
-24;AEMA;Artificial Intelligence;Search;Intelligent search with AI;spot;#intelligence,#ai,#sensei,#search;https://adobe.sharepoint.com/:v:/s/AEMLatam/EddaQTrjWU1Hnt4PPyu8uzIBifuI_fy4U57U9qSnfjwiFw?e=zw4kNG;
-25;AEMA;Artificial Intelligence;Smart Tags & Smart Crop;Media Automation and Intelligence;spot;#automation,#intelligence,#smarttag,#smartvideo,#smartcrop,#photoshop;https://adobe.sharepoint.com/:v:/s/AEMLatam/Eei4ztDC8KVBo_a10SZWI8QBbcIqI_N2W5z1e5FDgcYvrA?e=7R9R8w;
-26;AEMS;Artificial Intelligence;Content Summarization;Auto summarize content per channel using AI;spot;#ai,#sensei,#automation,#summarization;https://adobe.sharepoint.com/:v:/s/AEMLatam/EZk0W8kvMkFPtVaqTL8K4zIBV_K2PM86zRUxQ57Q1ysatg?e=QPwXfE;
-27;AEMF;Artificial Intelligence;PDF Form Automation;PDF Conversion with Form Authoring;quick;#form,#pdf,#ai,#sensei,#authoring,#conversion;https://adobe.sharepoint.com/:v:/s/AEMLatam/EavBwdaMaIFOhuZSL9ez8l0B0hmSAXQS98H-GmqS52Vy2g?e=8qqOhT;
-28;AEMS;Content as a service;Omnichhanel;Omnichannel Experiences at Email, Chat, Voice and Mobile App;quick;#app,#email,#voice,#chat,#headless,#omnichannel;https://adobe.sharepoint.com/:v:/s/AEMLatam/ER2KdfEIxRZIo_wBVSkqvfIBJqabL1yiCV722Cmlvl8xRw?e=vqS7yy;
-28;AEMS;Content as a service;Headless;Headless CMS with JSON Output;spot;#headless,#json,#contentfragment,#cf;https://adobe.sharepoint.com/:v:/s/AEMLatam/ETOrrf0k0a1FpY3VtM80Kx8B4P6nuzswlY7bzuwerdStlQ?e=eDNvuQ;https://youtu.be/9t2uw_pZ-no
-29;AEMS;Content as a service;Headless;Headless CMS with GraphQL;spot;#headless,#json,#graphql,#javascript;https://adobe.sharepoint.com/:v:/s/AEMLatam/EVGjNfZAEstGnQES35zBBRYBJW9TVeQi-7sEVuqWR2NYhw?e=sRbXXC;
-29;AEMS;Content as a service;Headless;GraphQL with real time example;spot;#headless,#json,#graphql,#javascript;https://adobe.sharepoint.com/:v:/s/AEMLatam/ETmQ0QA5KtVGhsUnvh5NiuUB4sWY-rkBVZ8_yZJv3aaW5Q?e=7d7OY8;
-30;AEM;Content as a service;Screens;;None;;;
-31;AEMA;Brand Portal;Brand Portal;Build your Brand Portal with published media;None;;;
-31;AEMA;Dynamic Media;Auto responsive images;Dynamic Media with automatic responsive images;spot;#dynamicmedia,#responsive;https://adobe.sharepoint.com/:v:/s/AEMLatam/EY91KZA7YOpPivbOp4-zPjIB5iKaSBu1PTLhsT0EN3v1vA?e=tsZx8O;https://youtu.be/7uOL2RhLbmw
-31;AEMA;Dynamic Media;Emergent Media & Shoppable Experiences;360 and 3D Images with Amazing Shoppable Experience;spot;#dynamicmedia,#360,#3d,#shopping;https://adobe.sharepoint.com/:v:/s/AEMLatam/EX39cCWsJplNims_xo1hJQUByuxMuDy5RZYZfo5xK6A1Jg?e=3SOJOj;
-31;AEMA;Dynamic Media;Configurable Media;;quick;#dynamicmedia,#smarttag,#rendition,#smartcrop,#configurablemedia;https://adobe.sharepoint.com/:v:/s/AEMLatam/ETd3n7X0GQdMiljEsiwZttkBwNdmlEP_KQRkC1nZzG9i3A?e=KaoNbN;
-32;AEM;Training;Experience League;;marketing;;https://adobe.sharepoint.com/:v:/s/AEMLatam/EY0Hk8iUoIRGiCNtg29_8bkB_AxoI_PEPCpiMqMBCz4v_Q?e=IcnBHI;
-32;AEMA;Dynamic Media;Dynamic Media;Automated asset creation with Auto-tag & Renditions & Dynamic media & Smart crop;quick;#automation,#ai,#sensei,#autotag,#smartcrop,#dynamicmedia,#rendition;https://adobe.sharepoint.com/:v:/s/AEMLatam/ETd3n7X0GQdMiljEsiwZttkBwNdmlEP_KQRkC1nZzG9i3A?e=ECOkA9;https://youtu.be/RAR2G3769i4
-33;AEM;Cloud;Cloud Infrastructure & Architecture;;None;;;
-33;AEM;Cloud;CI/CD & Code Audit;Code your theme with local proxy;spot;#code,#developer,#localtest,#theme;https://adobe.sharepoint.com/:v:/s/AEMLatam/EQnZOV5F_bNCtehn-0bUSx8BB78vHrmN7vSpi-2WZ7amew?e=wkgl8Y;
-33;AEM;Cloud;CI/CD & Code Audit;Deploy your code through pipeline;spot;#code,#pipeline,#cicd;https://adobe.sharepoint.com/:v:/s/AEMLatam/EUkXfyQ9SXxPjELbXUCImCoBAmFlkeg2pzpPcGq1YAm9hw?e=XIaqyf;
-33;AEM;Cloud;Security & Certificates;;None;;;
-34;AEM;Cloud;Support;;None;;;
-99;ALM;Learning Experience;Integration;Learning Experience built into your portal;quick;;https://adobe.sharepoint.com/:v:/s/AEMLatam/EWlVbF9NRwVEgpEXIrLSlBgBtroMuOoktlKZ5ZLRdjqPuw?e=7KSvIX;
-99;AEMA;Workfront;Integration;Integrate your Asset creation with a Marketing Management solution - Workfront;quick;#workfront,#marketing,#management,#project,#goal;https://adobe.sharepoint.com/:v:/s/AEMLatam/EUt6PT720l1IopNvXzcV5hUBsIOLhRj0c_ta1vajQ8XxEA?e=Pwjy3l;
-100;AEMA;Dynamic Media;;Intelligent Automation for Asset and Media Content;marketing;#automation,#ai,#sensei,#asset;https://adobe.sharepoint.com/:v:/s/AEMLatam/EU1ox7XoLp1EmnX7q2oJ1vEBjIPfaZMNQecjwMKJYj3kRQ?e=nIkBpY;
-100;AEMS;Personalization;;Personalization at Scale;marketing;#cms,#target,#personalization,#responsive,#style,#kpi;https://adobe.sharepoint.com/:v:/s/AEMLatam/EcPeIRfeBmdBu3ZrgU09kf0BPqF2i3DEPUk5LGg548pT6g?e=fgW2P5;
-100;AEMS;Content as a service;;Omnichannel & Headless Content;marketing;#cms,#headless,#omnichannl,#api;https://adobe.sharepoint.com/:v:/s/AEMLatam/Ec9OnMWa7SpJsxE_0sqCu-sBr8af2UGH6rCx81EzrelfVw?e=HgWih7;
-100;AEMF;Artificial Intelligence;;PDF Form Conversion;marketing;#form,#pdf,#ai,#sensei,#conversion;https://adobe.sharepoint.com/:v:/s/AEMLatam/Ec6wfMHdHLpDq7UvOw0yilYBGpi0HEQ4e9qBFk03dFrHUA?e=wizPDA;
-100;AEMS;Personalization;;A personalized digital experience;marketing;#cms,#sites,#target,#personalization,#tourism,#travel;https://adobe.sharepoint.com/:v:/s/AEMLatam/EeBB76w3PENNlsT7Ub-ABr8BwigHo_bgp5HrF9pWs4WC6Q?e=SSbESX;
-100;AEMS;Content as a service;;Omnichannel experiences;marketing;#cms,#headless,#omnichannl,#api;https://adobe.sharepoint.com/:v:/s/AEMLatam/ER-_Op9EIb5Hv7KKqqbXqs8BsKawbjruH_7Ns2tqJPxv8g?e=UCItlw;
-100;AEMF;Digital Enrollment;;Digital Enrollment;marketing;#form,#integration,#authoring,#personalization;https://adobe.sharepoint.com/:v:/s/AEMLatam/EaC_zWOmIWFFu5rE3HoqNlEBJDSutAF45xfvRQVMTIKZoA?e=27se1b;
-100;AEC;Adobe Sensei;;Adobe Sensei Framework;marketing;#adobesensei,#sensei,#ai,#ml;https://adobe.sharepoint.com/:v:/s/AEMLatam/Efv5h_20-g1Nukz6ZLEkSQcBBIagOQbML9YNLI1IKy7hdw?e=w5A6UW;
+﻿#;Solution;Capability;Feature;Title;Type;Keywords;Link
+1;AEMS;Authoring;Core Components;;None;;
+2;AEMS;Authoring;Adobe XD UI Kit;Prototype wiith Adobe XD;spot;#adobexd,#xd,#prototype,#design;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/bbf0c44f-5e58-42c0-98ac-c661d7d6c5a2
+3;AEMS;Authoring;Style System;Style System with Design Variations;spot;#designsystem,#style,#variation;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/bd16bd9e-7a35-4cd2-8641-8423a98eb986
+4;AEMS;Authoring;Editable Templates;Quick Site Creation with Templates;spot;#sitecreation,#quicksite,#template;
+5;AEMS;Authoring;Page Authoring;Page Authoring with Components;spot;#authoring,#page;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/a54c7407-d0bd-4ef1-b5b8-d0f1a77c67de
+5;AEMS;Authoring;Page Authoring;Responsive Page Authoring with Components;spot;#authoring,#page,#responsive;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/335dec93-0fcc-48aa-90e4-e25e916c71dc
+6;AEMA;Authoring;Metadata;Metadata Governance;spot;#metadata,#asset,#attribute,#governance;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/c9353c13-c72c-4bda-804b-9fc52c67d096
+7;AEMS;Authoring;SEO;;None;;
+8;AEMS;Authoring;Quick site;Quick Site Creation with Templates;spot;#sitecreation,#quicksite,#template;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/fe132512-0f81-456a-a1c4-2c08cb871de6
+9;AEMS;Authoring;Multisite;Multisite Management;None;;
+9;AEMA;Authoring;Content Automation;Auomate your image creation and edition;spot;"#assets,#photoshop,#contentautomation;#filters";https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/fa446b3d-51a9-4ae6-8014-a15efc4ec77a
+10;AEMA;Collaboration;Asset link;Creative Cloud (Photoshop) integration;spot;#creativecloud,#photoshop,#integration;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/0a968ef4-84c2-4dd8-8541-d6878630dd58
+11;AEMA;Collaboration;Workflow;Workflow to process your assets;spot;#dam,#workflow,#process,#bpm,#profile;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/c89b2e0b-ccd0-4c37-a073-4e08b2e64ac2
+12;AEMA;Collaboration;Annotation;Image and Video Annotation for Workflow;spot;#annotation,#workflow;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/16c3b2c7-0c45-40a7-9ed2-eec642a7e991
+13;AEM;Collaboration;Permission;;None;;
+14;AEMA;Collaboration;Versioning;Media Versioning and Comparison;spot;#asset,#version,#comparison;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/9aa2c6ac-988c-449b-987c-aa74501a6f3a
+15;AEMF;Collaboration;Data mapping and workflow form submission;Data Integration and Workflow;quick;#form,#integration,#salesforce,#workflow;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/b832d397-6214-489f-913f-fcf9f551f2e7
+16;AEMS;Fluid Experiences;Content Fragment Editor;Content Fragment Editor;spot;#contentfragment,#cf,#headless;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/a8529af4-b64e-4c01-9d10-0065e99fab56
+17;AEMS;Fluid Experiences;Content Fragment (JSON/HTML);Content Variations for specific channels;spot;#contentfragment,#cf,#omnichannel,#variation;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/7d612239-92c8-446d-9fc2-784682e002fb
+17;AEMS;Fluid Experiences;Experience Fragment;Variations for your content with Experience Fragments;spot;#xf,#experiencefragment,#variation,#content,#omnichannel;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/290e736d-671d-473e-b7c8-49cfcfed5332
+17;AEMS;Fluid Experiences;Experience Fragment;Responsive Components with Experience Fragments;spot;#responsive,#experiencefragment,#xf;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/b1811caf-4688-45f4-b84c-4500aaf3860b
+18;AEMS;Fluid Experiences;PWA;Make any page a PWA;None;;
+19;AEMS;Fluid Experiences;SPA;SPA Editor with in-context editing;spot;#spa,#authoring,#javascript,#react,#angular,#incontext;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/d5bdb849-849f-4a03-970c-eab56fefb419
+19;AEMS;Fluid Experiences;SPA;Remote SPA to proxy your Javascript application;spot;#spa,#developer,#javascript,#react,#angular,#incontext;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/97e4cda7-49b2-4ae9-a804-74027ec41cbc
+20;AEMS;Analytics;Content Insights;Insights for your content;None;;
+20;AEMA;Analytics;Assets Insights;Insights to understand how your assets are performing;spot;#asset,#insights,#performance,#analytics;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/db5f3e6e-e7f8-4104-96ed-0787ec1bee26
+21;AEMS;Analytics;Analytics Insights;Analytics with Setup Automated for AEM Site Performance;spot;#sites,#performance,#analytics,#siteperformance;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/818e24d6-2c43-4b6c-afbb-b8fcd3640680
+22;AEMS;Personalization;Contextualization;Contextualization for logged users;spot;#personalization,#contextualization,#authenticated,#portal;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/ca64ae73-47f8-423f-999e-3c74abf9bede
+23;AEMS;Personalization;Experience Fragment to Adobe Target;Experience Fragments for Personalization & AB Test with Adobe Target;quick;#xf,#experiencefragment,#abtest,#personalization,#target;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/09d90a5e-e5f1-4874-9686-db849363a30b
+23;AEMS;Personalization;Experimentation at Marriot;Experimentation of experiences at Marriot digital chanels;spot;#personalization,#abtest,#experimentation,#target;
+23;AEMF;Personalization;A/B Tests;AB Tests for your Digital Forms to target your audience;spot;#form,#personalization,#optimization,#abtest;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/8ce8da85-5dd0-43d0-812c-6ce6a7b9b570
+24;AEMA;Artificial Intelligence;Search;Intelligent Search by Similar Images using AI;spot;#search,#ai,#sensei,#similarimages;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/37a8e710-4f7e-4421-9674-e4f73b056145
+24;AEMA;Artificial Intelligence;Search;Intelligent search with auto translation using AI;spot;#intelligence,#ai,#sensei,#search;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/3366e169-3fa1-4c97-b939-eec22d655eac
+25;AEMA;Artificial Intelligence;Smart Tags & Smart Crop;Media Automation and Intelligence;spot;#automation,#intelligence,#smarttag,#smartvideo,#smartcrop,#photoshop;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/b954310f-0524-4e54-a803-469e8f86662c
+26;AEMS;Artificial Intelligence;Content Summarization;Auto summarize content per channel using AI;spot;#ai,#sensei,#automation,#summarization;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/edbb9c34-8d20-4210-b006-1acceb14753b
+27;AEMF;Artificial Intelligence;PDF Form Automation;PDF Conversion with Form Authoring;spot;#form,#pdf,#ai,#sensei,#authoring,#conversion;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/c2203dfa-b6c3-43b2-96ba-7eda27176193
+27;AEMF;Artificial Intelligence;PDF Form Automation 2 ;PDF Conversion with multiples PDF pages;spot;#form,#pdf,#ai,#sensei,#authoring,#conversion;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/67686701-98ba-4174-89f7-ddd5ac659eb8
+28;AEMS;Content as a service;Omnichhanel;Omnichannel Experiences at Email, Chat, Voice and Mobile App;quick;#app,#email,#voice,#chat,#headless,#omnichannel;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/a782c938-b507-4fe7-b1d6-c3bad52cbdbc
+28;AEMS;Content as a service;Headless;Headless CMS with JSON Output;spot;#headless,#json,#contentfragment,#cf;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/9c577731-60e4-497a-afcc-14bc5f8a2abe
+29;AEMS;Content as a service;Headless;Headless CMS with GraphQL;spot;#headless,#json,#graphql,#javascript;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/49a38c62-ebed-4668-9afb-21aea5e54777
+29;AEMS;Content as a service;Headless;GraphQL with real time example in mobile app;spot;#headless,#json,#graphql,#javascript,#mobileapp;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/a6311298-4e9b-4fe6-a280-b5779393619e
+30;AEM;Content as a service;Screens;;None;;
+31;AEMA;Brand Portal;Brand Portal;Build your Brand Portal with published media;None;;
+31;AEMA;Dynamic Media;Auto responsive images;Dynamic Media with automatic responsive images;spot;#dynamicmedia,#responsive;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/e769c02e-39db-4ce5-9930-59e027f6765a
+31;AEMA;Dynamic Media;Emergent Media & Shoppable Experiences;360 and 3D Images with Amazing Shoppable Experience;spot;#dynamicmedia,#360,#3d,#shopping;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/4205fdff-4f12-4d3f-8723-0251a14cc683
+32;AEM;Training;Experience League - Portuguese;;marketing;;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/a680a9ab-ba46-48cd-8b77-f6b5238ce35d
+32;AEM;Training;Experience League - English;;marketing;;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/0815d913-4051-4724-a581-f4fd98c116f1
+32;AEMA;Dynamic Media;Dynamic Media;Automated asset creation with Auto-tag & Renditions & Dynamic media & Smart crop;quick;#automation,#ai,#sensei,#autotag,#smartcrop,#dynamicmedia,#rendition,#configurablemedia;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/3fe843e9-a094-420b-a524-ce92ed8aa70d
+33;AEM;Cloud;Cloud Infrastructure & Architecture;;None;;
+33;AEM;Cloud;CI/CD & Code Audit;Code your theme with local proxy;spot;#code,#developer,#localtest,#theme;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/dbd29d8e-d2bf-4019-a4e1-96d30aff7da4
+33;AEM;Cloud;CI/CD & Code Audit;Deploy your code through pipeline;spot;#code,#pipeline,#cicd,#autoupdates,#deploy;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/97948b75-eb95-48aa-a461-47e2e1512b4c
+33;AEM;Cloud;Security & Certificates;;None;;
+34;AEM;Cloud;Support;;None;;
+99;ALM;Learning Experience;Integration;Learning Experience built into your portal;quick;#lxp,#lms,#learning,#captivateprime;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/efae55dc-d025-41f7-9b0d-eaa65ce1f7ee
+99;AEMA;Workfront;Integration;Integrate your Asset creation with a Marketing Management solution - Workfront;quick;#workfront,#marketing,#management,#project,#goal;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/5ab78bea-1e59-421e-8c99-2bd529318a64
+100;AEMA;Dynamic Media;;Intelligent Automation for Asset and Media Content;marketing;#automation,#ai,#sensei,#asset;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/78760f04-cd13-44b9-b8e8-e706d94c3104
+100;AEMS;Personalization;;Personalization at Scale;marketing;#cms,#target,#personalization,#responsive,#style,#kpi;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/6332c29e-8278-4edf-b86e-5c3d284866f7
+100;AEMS;Content as a service;;Omnichannel & Headless Content;marketing;#cms,#headless,#omnichannl,#api;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/1bbd1c74-af22-4cef-9526-e168c9de1998
+100;AEMF;Artificial Intelligence;;PDF Form Conversion;marketing;#form,#pdf,#ai,#sensei,#conversion;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/d5604d22-b01b-4ae4-81f3-0535be71a93f
+100;AEMS;Personalization;;A personalized digital experience;marketing;#cms,#sites,#target,#personalization,#tourism,#travel;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/511f8b64-81ca-4c13-939b-7f050eb4144c
+100;AEMS;Content as a service;;Omnichannel experiences;marketing;#cms,#headless,#omnichannl,#api;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/6a0a38f3-df4b-4da3-8349-6b41e008e4a2
+100;AEMF;Digital Enrollment;;Digital Enrollment - Portuguese;marketing;#form,#integration,#authoring,#personalization;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/791b6bee-dd97-4705-841c-853f0626783b
+100;AEMF;Digital Enrollment;;Digital Enrollment - English;marketing;#form,#integration,#authoring,#personalization;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/6a80f162-27c2-4030-bc38-d3eaf8565b9c
+100;AEC;Adobe Sensei;;Adobe Sensei Framework;marketing;#adobesensei,#sensei,#ai,#ml;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/e4efcceb-031e-4aa9-a04b-931cf370c115
+100;AT;Adobe Target;;Auto Personalization;spot;#personalization,#ai;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/f83c626d-55e0-45f0-9199-b37bc47a4bab
+100;AEC;Delloite Digital;;Content Studio - English;marketing;#dxp,#personalization,#content,#cms;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/98df6286-f582-45d0-b45a-902e8a993e65
+100;AEC;Delloite Digital;;Content Studio - Spanish;marketing;#dxp,#personalization,#content,#cms;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/667175c2-1520-4bb5-b1bf-8ded67c768fa
+100;AEC;Delloite Digital;;Content Studio - Portuguese;marketing;#dxp,#personalization,#content,#cms;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/4b1261d3-d409-4e87-85b7-79638b31bd5c
+100;ALM;Employee Portal;;Employee Portal - English;marketing;#lxp,#lms,#learning,#captivateprime;https://assets.adobe.com/public/c06027c8-9b85-4c0e-7ba7-7e0364fc7049/91e8ce66-7978-43d0-8076-a02ca9218966
+100;ALM;Employee Portal;;Employee Portal - Portuguese;marketing;#lxp,#lms,#learning,#captivateprime;
